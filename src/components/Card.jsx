@@ -23,10 +23,10 @@ export default class Card extends Component {
           <h5 data-testid="attr2-card">{ cardAttr2 }</h5>
           <h5 data-testid="attr3-card">{ cardAttr3 }</h5>
         </div>
-        <h4 data-testid="rare-card">{ cardRare }</h4>
         {cardTrunfo === true ? (
           <h3 data-testid="trunfo-card">Super Trunfo</h3>
         ) : null}
+        <h4 data-testid="rare-card">{ cardRare }</h4>
         <p data-testid="description-card">{ cardDescription }</p>
       </div>
     );
