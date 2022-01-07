@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Form extends Component {
   render() {
@@ -13,7 +14,7 @@ export default class Form extends Component {
         cardRare,
         cardTrunfo,
         // hasTrunfo,
-        isSavedButtonDisable,
+        isSaveButtonDisabled,
         onInputChange,
         onSaveButtonClick,
       } = this.props;
@@ -25,6 +26,8 @@ export default class Form extends Component {
             name="cardName"
             type="text"
             data-testid="name-input"
+            value={ cardName }
+            onChange={ onInputChange }
           />
         </label>
         <br />
@@ -34,6 +37,8 @@ export default class Form extends Component {
             name="cardImage"
             type="text"
             data-testid="image-input"
+            value={ cardImage }
+            onChange={ onInputChange }
           />
         </label>
         <br />
@@ -43,6 +48,8 @@ export default class Form extends Component {
             name="attr1"
             type="number"
             data-testid="attr1-input"
+            value={ cardAttr1 }
+            onChange={ onInputChange }
           />
         </label>
         <br />
@@ -52,6 +59,8 @@ export default class Form extends Component {
             name="attr2"
             type="number"
             data-testid="attr2-input"
+            value={ cardAttr2 }
+            onChange={ onInputChange }
           />
         </label>
         <br />
@@ -61,6 +70,8 @@ export default class Form extends Component {
             name="attr3"
             type="number"
             data-testid="attr3-input"
+            value={ cardAttr3 }
+            onChange={ onInputChange }
           />
         </label>
         <br />
@@ -70,13 +81,15 @@ export default class Form extends Component {
             name="cardTrunfo"
             type="checkbox"
             data-testid="trunfo-input"
+            checked={ cardTrunfo }
+            onChange={ onInputChange }
           />
         </label>
         <br />
         <label htmlFor="cardRare">
           <select
             name="cardRare"
-            data-testId="rare-input"
+            data-testid="rare-input"
             value={ cardRare }
             onChange={ onInputChange }
           >
@@ -100,7 +113,7 @@ export default class Form extends Component {
         <button
           data-testid="save-button"
           type="submit"
-          disabled={ isSavedButtonDisable }
+          disabled={ isSaveButtonDisabled }
           onClick={ onSaveButtonClick }
         >
           Salvar
@@ -109,3 +122,18 @@ export default class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  cardName: PropTypes.string.isRequired,
+  cardDescription: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.string.isRequired,
+  cardAttr2: PropTypes.string.isRequired,
+  cardAttr3: PropTypes.string.isRequired,
+  cardImage: PropTypes.string.isRequired,
+  cardRare: PropTypes.string.isRequired,
+  cardTrunfo: PropTypes.bool.isRequired,
+  // hasTrunfo: PropTypes.bool.isRequired,
+  isSaveButtonDisabled: PropTypes.bool.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  onSaveButtonClick: PropTypes.func.isRequired,
+};

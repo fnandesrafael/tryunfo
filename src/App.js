@@ -29,11 +29,11 @@ class App extends React.Component {
           cardAttr3=""
           cardImage=""
           cardRare=""
-          cardTrunfo="false"
-          hasTrunfo="false"
-          isSaveButtonDisable="true"
-          onInputChange={ this.onInputChange() }
-          onSaveButtonClick={ this.onSaveButtonClick() }
+          cardTrunfo
+          hasTrunfo={ false }
+          isSaveButtonDisabled={ false }
+          onInputChange={ this.onInputChange }
+          onSaveButtonClick={ this.onSaveButtonClick }
         />
       </div>
     );
