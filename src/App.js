@@ -2,11 +2,39 @@ import React from 'react';
 import Form from './components/Form';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+
+    };
+  }
+
+  onInputChange = () => {
+    console.log('ola');
+  }
+
+  onSaveButtonClick = () => {
+    console.log('ola');
+  }
+
   render() {
     return (
       <div>
         <h1>Tryunfo</h1>
-        <Form />
+        <Form
+          cardName=""
+          cardDescription=""
+          cardAttr1=""
+          cardAttr2=""
+          cardAttr3=""
+          cardImage=""
+          cardRare=""
+          cardTrunfo="false"
+          hasTrunfo="false"
+          isSaveButtonDisable="true"
+          onInputChange={ this.onInputChange() }
+          onSaveButtonClick={ this.onSaveButtonClick() }
+        />
       </div>
     );
   }
