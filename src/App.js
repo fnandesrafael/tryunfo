@@ -8,13 +8,14 @@ class App extends React.Component {
     this.state = {
       cardName: '',
       cardDescription: '',
-      cardAttr1: '',
-      cardAttr2: '',
-      cardAttr3: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
       cardImage: '',
       cardRare: true,
       cardTrunfo: false,
       isSaveButtonDisabled: true,
+      tryunfoDeck: [],
     };
   }
 
@@ -57,7 +58,27 @@ class App extends React.Component {
   }
 
   onSaveButtonClick = () => {
-    console.log('ola');
+    const { cardName, cardDescription, cardImage, cardRare, cardTrunfo,
+      cardAttr1, cardAttr2, cardAttr3 } = this.state;
+    this.setState((prevState) => ({
+      tryunfoDeck: [...prevState.tryunfoDeck, {
+        cardName,
+        cardDescription,
+        cardImage,
+        cardRare,
+        cardTrunfo,
+        cardAttr1,
+        cardAttr2,
+        cardAttr3,
+      }],
+      cardName: '',
+      cardDescription: '',
+      cardImage: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardRare: 'normal',
+    }));
   }
 
   render() {
