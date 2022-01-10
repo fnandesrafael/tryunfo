@@ -14,6 +14,7 @@ class App extends React.Component {
       cardImage: '',
       cardRare: true,
       cardTrunfo: false,
+      isSaveButtonDisabled: true,
     };
   }
 
@@ -22,7 +23,37 @@ class App extends React.Component {
     const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
       [name]: value,
-    });
+    }, this.ableButton);
+  }
+
+  /**
+   * Consultado o repositório do aluno Pedro Goulart como referência para o uso do método Number()
+   * Link -> https://github.com/tryber/sd-017-project-tryunfo/pull/57/commits/aca956df5135f59eb6717ff9efe327020516a4b1
+   */
+
+  ableButton = () => {
+    // Desconstrução dos estados
+    const { cardName, cardImage, cardDescription, cardRare,
+      cardAttr1, cardAttr2, cardAttr3 } = this.state;
+    // Variáveis para não usar magic number nas verificações condicionais
+    const ATTRLIMITER = 90;
+    const ALLATTRSUMLIMITER = 210;
+    // Estruturas condicionais
+    if (
+      cardName !== '' && cardImage !== '' && cardDescription !== '' && cardRare !== ''
+      && Number(cardAttr1) >= 0 && Number(cardAttr1) <= ATTRLIMITER
+      && Number(cardAttr2) >= 0 && Number(cardAttr2) <= ATTRLIMITER
+      && Number(cardAttr3) >= 0 && Number(cardAttr3) <= ATTRLIMITER
+      && Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3) <= ALLATTRSUMLIMITER
+    ) {
+      this.setState({
+        isSaveButtonDisabled: false,
+      });
+    } else {
+      this.setState({
+        isSaveButtonDisabled: true,
+      });
+    }
   }
 
   onSaveButtonClick = () => {
@@ -40,6 +71,7 @@ class App extends React.Component {
         cardImage,
         cardRare,
         cardTrunfo,
+        isSaveButtonDisabled,
       } = this.state;
     return (
       <div>
@@ -54,7 +86,7 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
           hasTrunfo={ false }
-          isSaveButtonDisabled
+          isSaveButtonDisabled={ isSaveButtonDisabled }
           onInputChange={ this.onInputChange }
           onSaveButtonClick={ this.onSaveButtonClick }
         />
