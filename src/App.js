@@ -1,7 +1,6 @@
 import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
-import './styles/header.css';
 
 class App extends React.Component {
   constructor() {
@@ -103,9 +102,6 @@ class App extends React.Component {
       } = this.state;
     return (
       <div>
-        <header className="tryunfo-header">
-          <h1 className="header-title">Tryunfo</h1>
-        </header>
         <div className="create-card-space">
           <Form
             cardName={ cardName }
