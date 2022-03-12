@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../styles/Card.css';
 
 export default class Card extends Component {
   render() {
@@ -15,16 +16,60 @@ export default class Card extends Component {
         cardTrunfo,
       } = this.props;
     return (
-      <div id="new-card">
-        <h3 data-testid="name-card">{ cardName }</h3>
-        <img src={ cardImage } alt={ cardName } data-testid="image-card" />
-        <div>
-          <h5 data-testid="attr1-card">{ cardAttr1 }</h5>
-          <h5 data-testid="attr2-card">{ cardAttr2 }</h5>
-          <h5 data-testid="attr3-card">{ cardAttr3 }</h5>
+      <div
+        id="new-card"
+        className="card-body"
+      >
+        <h2
+          className="card-title"
+        >
+          Pré Visualização da Carta
+
+        </h2>
+        <h3
+          data-testid="name-card"
+          className="name-display"
+        >
+          { cardName }
+
+        </h3>
+        <img
+          src={ cardImage }
+          alt={ cardName }
+          data-testid="image-card"
+          className="image-display"
+        />
+        <div className="attributes-group">
+          <h5
+            data-testid="attr1-card"
+            className="attribute-display"
+          >
+            { cardAttr1 }
+
+          </h5>
+          <h5
+            data-testid="attr2-card"
+            className="attribute-display"
+          >
+            { cardAttr2 }
+
+          </h5>
+          <h5
+            data-testid="attr3-card"
+            className="attribute-display"
+          >
+            { cardAttr3 }
+
+          </h5>
         </div>
         {cardTrunfo === true ? (
-          <h3 data-testid="trunfo-card">Super Trunfo</h3>
+          <h3
+            data-testid="trunfo-card"
+            className="trunfo-display"
+          >
+            Super Trunfo ⭐
+
+          </h3>
         ) : null}
         <h4 data-testid="rare-card">{ cardRare }</h4>
         <p data-testid="description-card">{ cardDescription }</p>

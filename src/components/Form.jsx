@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../styles/form.css';
+import '../styles/Form.css';
 
 export default class Form extends Component {
   render() {
@@ -21,6 +21,7 @@ export default class Form extends Component {
       } = this.props;
     return (
       <div className="form-body">
+        <h2>Adicionar Nova Carta</h2>
         <label
           htmlFor="cardName"
           className="name-space"
@@ -32,9 +33,9 @@ export default class Form extends Component {
             data-testid="name-input"
             value={ cardName }
             onChange={ onInputChange }
+            className="input-tag"
           />
         </label>
-        <br />
         <label
           htmlFor="cardImage"
           className="image-space"
@@ -46,9 +47,10 @@ export default class Form extends Component {
             data-testid="image-input"
             value={ cardImage }
             onChange={ onInputChange }
+            className="input-tag"
+
           />
         </label>
-        <br />
         <div className="attribute-spaces">
           <label
             htmlFor="attr1"
@@ -63,9 +65,9 @@ export default class Form extends Component {
               onChange={ onInputChange }
               min="0"
               max="90"
+              className="input-tag"
             />
           </label>
-          <br />
           <label
             htmlFor="attr2"
             className="attribute-space"
@@ -79,9 +81,9 @@ export default class Form extends Component {
               onChange={ onInputChange }
               min="0"
               max="90"
+              className="input-tag"
             />
           </label>
-          <br />
           <label
             htmlFor="attr3"
             className="attribute-space"
@@ -95,9 +97,9 @@ export default class Form extends Component {
               onChange={ onInputChange }
               min="0"
               max="90"
+              className="input-tag"
             />
           </label>
-          <br />
         </div>
         <div className="rarity-spaces">
           {
@@ -119,20 +121,19 @@ export default class Form extends Component {
               </label>
             )
           }
-          <br />
           <label htmlFor="cardRare">
             <select
               name="cardRare"
               data-testid="rare-input"
               value={ cardRare }
               onChange={ onInputChange }
+              className="rare-input"
             >
               <option value="normal">Normal</option>
               <option value="raro">Raro</option>
               <option value="muito raro">Muito Raro</option>
             </select>
           </label>
-          <br />
         </div>
         <label
           htmlFor="description"
@@ -148,7 +149,6 @@ export default class Form extends Component {
             className="description-input"
           />
         </label>
-        <br />
         <button
           data-testid="save-button"
           type="submit"
