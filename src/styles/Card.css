@@ -1,0 +1,25 @@
+.card-body {
+  align-items: center;
+  background-color: #445e9c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 38rem;
+  padding: 1rem;
+  width: 40rem;
+}
+
+.name-display {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-display {
+  width: 15rem;
+}
+
+.attributes-group {
+  display: flex;
+  flex-direction: row;
+}

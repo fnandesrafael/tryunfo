@@ -11,6 +11,5 @@ code {
 .create-card-space {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin-top: 10rem;
+  justify-content: space-between;
 }
