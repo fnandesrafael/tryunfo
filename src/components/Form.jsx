@@ -117,6 +117,7 @@ export default class Form extends Component {
                   data-testid="trunfo-input"
                   checked={ cardTrunfo }
                   onChange={ onInputChange }
+                  className="trunfo-check"
                 />
               </label>
             )

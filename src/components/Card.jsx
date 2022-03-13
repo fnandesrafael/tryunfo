@@ -20,12 +20,6 @@ export default class Card extends Component {
         id="new-card"
         className="card-body"
       >
-        <h2
-          className="card-title"
-        >
-          Pré Visualização da Carta
-
-        </h2>
         <h3
           data-testid="name-card"
           className="name-display"
@@ -40,27 +34,36 @@ export default class Card extends Component {
           className="image-display"
         />
         <div className="attributes-group">
-          <h5
-            data-testid="attr1-card"
-            className="attribute-display"
-          >
-            { cardAttr1 }
+          <label htmlFor="attr1">
+            <h3 className="attr-title">ATTR 01</h3>
+            <h5
+              data-testid="attr1-card"
+              className="attribute-display"
+            >
+              { cardAttr1 }
 
-          </h5>
-          <h5
-            data-testid="attr2-card"
-            className="attribute-display"
-          >
-            { cardAttr2 }
+            </h5>
+          </label>
+          <label htmlFor="attr2">
+            <h3 className="attr-title">ATTR 02</h3>
+            <h5
+              data-testid="attr2-card"
+              className="attribute-display"
+            >
+              { cardAttr2 }
 
-          </h5>
-          <h5
-            data-testid="attr3-card"
-            className="attribute-display"
-          >
-            { cardAttr3 }
+            </h5>
+          </label>
+          <label htmlFor="attr3">
+            <h3 className="attr-title">ATTR 03</h3>
+            <h5
+              data-testid="attr3-card"
+              className="attribute-display"
+            >
+              { cardAttr3 }
 
-          </h5>
+            </h5>
+          </label>
         </div>
         {cardTrunfo === true ? (
           <h3
@@ -71,8 +74,19 @@ export default class Card extends Component {
 
           </h3>
         ) : null}
-        <h4 data-testid="rare-card">{ cardRare }</h4>
-        <p data-testid="description-card">{ cardDescription }</p>
+        <h4
+          data-testid="rare-card"
+          className="rare-display"
+        >
+          {`Raridade: ${cardRare}`}
+
+        </h4>
+        <p
+          data-testid="description-card"
+          className="description-display"
+        >
+          {cardDescription}
+        </p>
       </div>
     );
   }
