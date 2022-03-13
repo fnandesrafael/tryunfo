@@ -13,8 +13,9 @@ class App extends React.Component {
       cardAttr2: '0',
       cardAttr3: '0',
       cardImage: '',
-      cardRare: true,
+      cardRare: 'Normal',
       cardTrunfo: false,
+      token: '',
       isSaveButtonDisabled: true,
       tryunfoDeck: [],
       hasTrunfo: false,
@@ -72,6 +73,7 @@ class App extends React.Component {
         cardAttr1,
         cardAttr2,
         cardAttr3,
+        token: JSON.stringify(Math.random()),
       }],
       cardName: '',
       cardDescription: '',
@@ -84,6 +86,23 @@ class App extends React.Component {
       isSaveButtonDisabled: true,
       hasTrunfo: cardTrunfo ? true : prevState.hasTrunfo,
     }));
+  }
+
+  onClickDelete = ({ target }) => {
+    const { tryunfoDeck } = this.state;
+    // Recuperação do elemento pai ao clicar no botão excluir
+    const selectedCard = target.parentElement.firstChild;
+    const recoveredId = selectedCard.getAttribute('id');
+    // Novo array com cartas excluidas
+    const newTryunfoDeck = tryunfoDeck.filter((card) => card.token !== recoveredId);
+
+    this.setState({
+      tryunfoDeck: newTryunfoDeck,
+    }, () => {
+      const hasTrunfo = newTryunfoDeck.some((card) => card.cardTrunfo === true);
+      return hasTrunfo ? this.setState({ hasTrunfo: true })
+        : this.setState({ hasTrunfo: false });
+    });
   }
 
   render() {
@@ -99,10 +118,11 @@ class App extends React.Component {
         cardTrunfo,
         isSaveButtonDisabled,
         hasTrunfo,
+        token,
         tryunfoDeck,
       } = this.state;
     return (
-      <div>
+      <>
         <Header />
         <div className="create-card-space">
           <Form
@@ -142,21 +162,35 @@ class App extends React.Component {
         <div className="deck-display">
           {
             tryunfoDeck.map((card) => (
-              <Card
-                key={ card.cardName }
-                cardName={ card.cardName }
-                cardDescription={ card.cardDescription }
-                cardAttr1={ card.cardAttr1 }
-                cardAttr2={ card.cardAttr2 }
-                cardAttr3={ card.cardAttr3 }
-                cardImage={ card.cardImage }
-                cardRare={ card.cardRare }
-                cardTrunfo={ card.cardTrunfo }
-              />
+              <div
+                className="single-card"
+                key={ card.token }
+              >
+                <Card
+                  key={ token }
+                  token={ card.token }
+                  cardName={ card.cardName }
+                  cardImage={ card.cardImage }
+                  cardAttr1={ card.cardAttr1 }
+                  cardAttr2={ card.cardAttr2 }
+                  cardAttr3={ card.cardAttr3 }
+                  cardTrunfo={ card.cardTrunfo }
+                  cardRare={ card.cardRare }
+                  cardDescription={ card.cardDescription }
+                />
+                <button
+                  type="button"
+                  data-testid="delete-button"
+                  className="delete-button"
+                  onClick={ this.onClickDelete }
+                >
+                  Excluir
+                </button>
+              </div>
             ))
           }
         </div>
-      </div>
+      </>
     );
   }
 }

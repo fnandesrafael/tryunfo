@@ -14,11 +14,12 @@ export default class Card extends Component {
         cardImage,
         cardRare,
         cardTrunfo,
+        token,
       } = this.props;
     return (
       <div
-        id="new-card"
         className="card-body"
+        id={ token }
       >
         <h3
           data-testid="name-card"
@@ -99,6 +100,7 @@ Card.propTypes = {
   cardAttr2: PropTypes.string.isRequired,
   cardAttr3: PropTypes.string.isRequired,
   cardImage: PropTypes.string.isRequired,
-  cardRare: PropTypes.bool.isRequired,
+  cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
+  token: PropTypes.string.isRequired,
 };
