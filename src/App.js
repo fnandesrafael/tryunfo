@@ -2,6 +2,8 @@ import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import Header from './components/Header';
+import './styles/Deck.css';
+import DeckFilters from './components/DeckFilters';
 
 class App extends React.Component {
   constructor() {
@@ -18,6 +20,11 @@ class App extends React.Component {
       token: '',
       isSaveButtonDisabled: true,
       tryunfoDeck: [],
+      /**
+       * Criação de um estado que guarda o backup do baralho original, sugestão do aluno Carlos Rosa:
+       * Fonte -> https://github.com/tryber/sd-017-project-tryunfo/pull/2
+      */
+      tryunfoDeckBackup: [],
       hasTrunfo: false,
     };
   }
@@ -75,6 +82,17 @@ class App extends React.Component {
         cardAttr3,
         token: JSON.stringify(Math.random()),
       }],
+      tryunfoDeckBackup: [...prevState.tryunfoDeck, {
+        cardName,
+        cardDescription,
+        cardImage,
+        cardRare,
+        cardTrunfo,
+        cardAttr1,
+        cardAttr2,
+        cardAttr3,
+        token: JSON.stringify(Math.random()),
+      }],
       cardName: '',
       cardDescription: '',
       cardImage: '',
@@ -98,11 +116,23 @@ class App extends React.Component {
 
     this.setState({
       tryunfoDeck: newTryunfoDeck,
+      tryunfoDeckBackup: newTryunfoDeck,
     }, () => {
       const hasTrunfo = newTryunfoDeck.some((card) => card.cardTrunfo === true);
       return hasTrunfo ? this.setState({ hasTrunfo: true })
         : this.setState({ hasTrunfo: false });
     });
+  }
+
+  onChangeNameFilter = ({ target }) => {
+    this.setState({
+      tryunfoDeck: this.filterByName(target.value.toLowerCase()),
+    });
+  }
+
+  filterByName = (name) => {
+    const { tryunfoDeckBackup } = this.state;
+    return tryunfoDeckBackup.filter((card) => card.cardName.toLowerCase().includes(name));
   }
 
   render() {
@@ -158,7 +188,10 @@ class App extends React.Component {
             />
           </div>
         </div>
-        <h2 className="deck-title">Meu Deck</h2>
+        <h1 className="deck-title">Seu Deck</h1>
+        <DeckFilters
+          onChangeNameFilter={ this.onChangeNameFilter }
+        />
         <div className="deck-display">
           {
             tryunfoDeck.map((card) => (

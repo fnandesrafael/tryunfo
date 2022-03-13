@@ -1,0 +1,79 @@
+.deck-title {
+  color: #fbfbfb;
+  font-size: 2rem;
+  margin: 2rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.deck-display {
+  background-color: #0a090c;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+.single-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-button {
+  background-color: #003be5;
+  border-radius: 0.25rem;
+  border-style: none;
+  color: white;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  width: 7rem;
+}
+
+.delete-button:hover {
+  background-color: #5a6894;
+  transition: 0.2s;
+}
+
+.delete-button:disabled {
+  background-color: #161922;
+  transition: 0.2s;
+}
+
+.filters {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+}
+
+.filter-label {
+  color: #fbfbfe;
+  font-family: Segoe UI , Tahoma , Geneva , Verdana , sans-serif;
+}
+
+.deck-filter {
+  background-color: #15141a;
+  border: none;
+  border-bottom: 2px solid #74a9f6;
+  color: #fbfbfb;
+  font-size: 14px;
+  padding: 0.8rem;
+  width: 20rem;
+}
+
+.deck-filter:focus {
+  background-color: #242425;
+  outline: none;
+  transition: 0.2s;
+}
