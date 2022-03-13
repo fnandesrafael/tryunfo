@@ -1,11 +1,15 @@
 .form-body {
-  background-color: white;
   border-radius: 0.5rem;
-  color: #3d495c;
+  color: #fbfbfe;
+  font-family: Segoe UI , Tahoma , Geneva , Verdana , sans-serif;
   height: 25rem;
   margin-left: 10rem;
   padding: 1rem;
   width: 18rem;
+}
+
+.form-body h2 {
+  text-align: center;
 }
 
 .name-space {
@@ -46,34 +50,64 @@
 }
 
 .description-input {
-  height: 7rem;
+  background-color: #161922;
+  border: none;
+  border-bottom: 2px solid #74a9f6;
+  color: #fbfbfe;
+  font-family: Segoe UI , Tahoma , Geneva , Verdana , sans-serif;
+  height: 6rem;
+  padding: 0.75rem;
   width: 100%;
+}
+
+.description-input:focus {
+  background-color: #242425;
+  outline: none;
+  transition: 0.2s;
 }
 
 .save-btn {
   background-color: #003be5;
+  border-radius: 0.25rem;
   border-style: none;
   color: white;
   margin-top: 1rem;
   padding: 0.8rem 2rem;
 }
 
+.save-btn:hover {
+  background-color: #5a6894;
+  transition: 0.2s;
+}
+
+.save-btn:disabled {
+  background-color: #161922;
+  transition: 0.2s;
+}
+
 .input-tag {
-  background-color: white;
+  background-color: #15141a;
   border: none;
-  border-bottom: 1px solid #3d495c;
-  color: #3d495c;
+  border-bottom: 2px solid #74a9f6;
+  color: #fbfbfb;
   font-size: 14px;
   padding: 0.8rem;
 }
 
 .input-tag:focus {
-  background-color: hsl(0, 6%, 97%);
+  background-color: #242425;
   outline: none;
   transition: 0.2s;
 }
 
 .rare-input {
+  background-color: #161922;
+  border: none;
+  color: white;
   height: 1.5rem;
   width: 7rem;
+}
+
+.trunfo-check {
+  margin: 1rem;
 }

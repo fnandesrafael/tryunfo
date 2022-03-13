@@ -1,29 +1,81 @@
-.card-body {
+.card-background {
   align-items: center;
-  background-color: #445e9c;
+  background-color: #030304;
   color: white;
   display: flex;
   flex-direction: column;
-  height: 38rem;
+  height: 40rem;
   padding: 1rem;
   width: 40rem;
+}
+
+.card-body {
+  align-items: center;
+  background-color: #23222b;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 1rem #161922;
+  color: #fbfbfb;
+  display: flex;
+  flex-direction: column;
+  height: 28.2rem;
+  margin: 2rem;
+  width: 18rem;
 }
 
 .name-display {
   align-items: left;
   display: flex;
   flex-direction: column;
+  margin: 1rem;
 }
 
 .image-display {
-  width: 15rem;
+  background-color: #161922;
+  padding: 0.5rem 6rem;
+  width: 6rem;
 }
 
 .attributes-group {
   display: flex;
   flex-direction: row;
+  margin: 1rem;
 }
 
 .attribute-display {
+  background-color: #74a9f6;
+  border-radius: 0.25rem;
+  color: #030304;
+  font-size: 1rem;
   margin: 0 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.trunfo-display {
+  margin-top: 0.5rem;
+}
+
+.rare-display {
+  background-color: #0a2d53;
+  color: #fbfbfb;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+  text-transform: capitalize;
+  width: 18rem;
+}
+
+.description-display {
+  background-color: #74a9f6;
+  border-radius: 0.25rem;
+  color: #030304;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.attr-title {
+  font-size: 15px;
+  margin-top: 0;
+  text-align: center;
 }
