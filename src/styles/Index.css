@@ -19,6 +19,7 @@ code {
 .deck-title {
   color: #fbfbfb;
   font-size: 1.5rem;
+  margin: 2rem;
   text-align: center;
 }
 
@@ -27,6 +28,33 @@ code {
   display: flex;
   flex-flow: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem;
+}
+
+.single-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-button {
+  background-color: #003be5;
+  border-radius: 0.25rem;
+  border-style: none;
+  color: white;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  width: 7rem;
+}
+
+.delete-button:hover {
+  background-color: #5a6894;
+  transition: 0.2s;
+}
+
+.delete-button:disabled {
+  background-color: #161922;
+  transition: 0.2s;
 }
