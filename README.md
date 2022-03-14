@@ -57,18 +57,11 @@ No mais, o restante das dependencias e módulos também foram disponibilizados p
 cd src/
 npm install
 ``` 
-## Executando aplicação
-
-  ```
-* Para rodar o front-end:
-
+> Executando aplicação
   ```
     cd src/ && npm start
   ```
-
-## Executando Testes
-
-* Para rodar todos os testes:
+> Executando Testes
 
   ```
     npm test
