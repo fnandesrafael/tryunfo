@@ -28,6 +28,7 @@ class App extends React.Component {
       hasTrunfo: false,
       nameFilter: '',
       rareFilter: 'todas',
+      trunfoFilter: false,
     };
   }
 
@@ -127,11 +128,16 @@ class App extends React.Component {
     });
   }
 
+  /**
+   * A lógica base para a função onClickFilter foi derivada do repositório do aluno Jotta Novaes
+   * Link -> https://github.com/tryber/sd-017-project-tryunfo/pull/84
+   */
   onClickFilter = () => {
-    const { tryunfoDeckBackup, nameFilter, rareFilter } = this.state;
+    const { tryunfoDeckBackup, nameFilter, rareFilter, trunfoFilter } = this.state;
     const filteredDeck = tryunfoDeckBackup.filter((card) => card.cardName.toLowerCase()
       .includes(nameFilter.toLowerCase())
-        && (card.cardRare === rareFilter || rareFilter === 'todas'));
+        && (card.cardRare === rareFilter || rareFilter === 'todas')
+        && (card.cardTrunfo || !trunfoFilter));
     this.setState({
       tryunfoDeck: filteredDeck,
     });
@@ -192,40 +198,42 @@ class App extends React.Component {
           </div>
         </div>
         <h1 className="deck-title">Seu Deck</h1>
-        <DeckFilters
-          onInputChange={ this.onInputChange }
+        <div className="deck-content">
+          <DeckFilters
+            onInputChange={ this.onInputChange }
           // onClickFilter={ this.onClickFilter }
-        />
-        <div className="deck-display">
-          {
-            tryunfoDeck.map((card) => (
-              <div
-                className="single-card"
-                key={ card.token }
-              >
-                <Card
-                  key={ token }
-                  token={ card.token }
-                  cardName={ card.cardName }
-                  cardImage={ card.cardImage }
-                  cardAttr1={ card.cardAttr1 }
-                  cardAttr2={ card.cardAttr2 }
-                  cardAttr3={ card.cardAttr3 }
-                  cardTrunfo={ card.cardTrunfo }
-                  cardRare={ card.cardRare }
-                  cardDescription={ card.cardDescription }
-                />
-                <button
-                  type="button"
-                  data-testid="delete-button"
-                  className="delete-button"
-                  onClick={ this.onClickDelete }
+          />
+          <div className="deck-display">
+            {
+              tryunfoDeck.map((card) => (
+                <div
+                  className="single-card"
+                  key={ card.token }
                 >
-                  Excluir
-                </button>
-              </div>
-            ))
-          }
+                  <Card
+                    key={ token }
+                    token={ card.token }
+                    cardName={ card.cardName }
+                    cardImage={ card.cardImage }
+                    cardAttr1={ card.cardAttr1 }
+                    cardAttr2={ card.cardAttr2 }
+                    cardAttr3={ card.cardAttr3 }
+                    cardTrunfo={ card.cardTrunfo }
+                    cardRare={ card.cardRare }
+                    cardDescription={ card.cardDescription }
+                  />
+                  <button
+                    type="button"
+                    data-testid="delete-button"
+                    className="delete-button"
+                    onClick={ this.onClickDelete }
+                  >
+                    Excluir
+                  </button>
+                </div>
+              ))
+            }
+          </div>
         </div>
       </>
     );

@@ -1,3 +1,9 @@
+.deck-content {
+  display: flex;
+  flex-direction: row;
+  height: 70rem;
+}
+
 .deck-title {
   color: #fbfbfb;
   font-size: 2rem;
@@ -44,20 +50,26 @@
 }
 
 .filters {
-  align-items: center;
+  align-items: start;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  margin: 3.5rem 2rem;
   text-align: center;
 }
 
 .filter-group {
   display: flex;
   flex-direction: column;
-  margin: 1rem 2rem;
 }
 
-.filter-label {
+.checkbox-group {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0.15rem;
+}
+
+.filter-heading {
   color: #fbfbfe;
   font-family: Segoe UI , Tahoma , Geneva , Verdana , sans-serif;
 }
@@ -73,6 +85,22 @@
 }
 
 .deck-filter:focus {
+  background-color: #242425;
+  outline: none;
+  transition: 0.2s;
+}
+
+.deck-filter-select {
+  background-color: #15141a;
+  border: none;
+  border-bottom: 2px solid #74a9f6;
+  color: #fbfbfb;
+  font-size: 14px;
+  padding: 0.8rem;
+  width: 21.5rem;
+}
+
+.deck-filter-select:focus {
   background-color: #242425;
   outline: none;
   transition: 0.2s;
