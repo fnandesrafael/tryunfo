@@ -57,11 +57,11 @@ No mais, o restante das dependencias e módulos também foram disponibilizados p
 cd src/
 npm install
 ``` 
-> Executando aplicação
+> Executando a aplicação
   ```
     cd src/ && npm start
   ```
-> Executando Testes
+> Executando testes
 
   ```
     npm test
