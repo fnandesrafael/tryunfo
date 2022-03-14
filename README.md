@@ -8,7 +8,16 @@ Este projeto foi desenvolvido ao longo do módulo de front-end na Trybe. Sendo o
 ## Técnologias usadas
 
 Front-end:
-> Desenvolvido usando: React, CSS3, HTML5, ES6
+> Desenvolvido usando: ES6, React, HTML5, CSS3
+<div style="display: inline_block"><br>
+  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+</div>
+</br>
+</br>
+</br>
 
 ## No decorrer desse projeto, foram aprendidos e exercitados os seguintes conceitos:
 - Ler o estado de um componente e usá-lo para alterar o que exibimos no browser;
