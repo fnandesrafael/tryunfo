@@ -45,6 +45,7 @@ class App extends React.Component {
    */
 
   ableButton = () => {
+    this.onClickFilter();
     // Desconstrução dos estados
     const { cardName, cardImage, cardDescription, cardRare,
       cardAttr1, cardAttr2, cardAttr3 } = this.state;
@@ -193,7 +194,7 @@ class App extends React.Component {
         <h1 className="deck-title">Seu Deck</h1>
         <DeckFilters
           onInputChange={ this.onInputChange }
-          onClickFilter={ this.onClickFilter }
+          // onClickFilter={ this.onClickFilter }
         />
         <div className="deck-display">
           {

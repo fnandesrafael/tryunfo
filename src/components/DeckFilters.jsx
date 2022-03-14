@@ -29,14 +29,6 @@ export default class DeckFilters extends Component {
             <option value="raro">Raro</option>
             <option value="muito raro">Muito Raro</option>
           </select>
-          <button
-            type="button"
-            data-testid="filter-btn"
-            onClick={ onClickFilter }
-          >
-            Filtrar
-
-          </button>
         </div>
       </div>
     );

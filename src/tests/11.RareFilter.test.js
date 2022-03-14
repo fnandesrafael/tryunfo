@@ -58,10 +58,6 @@ describe("11 - Crie o filtro por raridade da carta", () => {
 
     const filterRareInput = screen.getByTestId(/rare-filter/i);
     userEvent.selectOptions(filterRareInput, "normal");
-
-    const filterBtn = screen.getByTestId(/filter-btn/i);
-    userEvent.click(filterBtn);
-
     expect(screen.getByText("Carta 3 - Van de transporte")).toBeInTheDocument();
 
     expect(screen.queryByText("Carta 1 - Uno de Escada")).not.toBeInTheDocument();
@@ -114,10 +110,6 @@ describe("11 - Crie o filtro por raridade da carta", () => {
 
     const filterRareInput = screen.getByTestId(/rare-filter/i);
     userEvent.selectOptions(filterRareInput, "raro");
-
-    const filterBtn = screen.getByTestId(/filter-btn/i);
-    userEvent.click(filterBtn);
-
     expect(screen.getByText("Carta 2 - Carro do ovo")).toBeInTheDocument();
 
     expect(screen.queryByText("Carta 1 - Uno de Escada")).not.toBeInTheDocument();
@@ -172,12 +164,7 @@ describe("11 - Crie o filtro por raridade da carta", () => {
 
     const filterRareInput = screen.getByTestId(/rare-filter/i);
     userEvent.selectOptions(filterRareInput, "muito raro");
-
-    const filterBtn = screen.getByTestId(/filter-btn/i);
-    userEvent.click(filterBtn);
-
     expect(screen.getByText("Carta 1 - Uno de Escada")).toBeInTheDocument();
-
 
     expect(screen.queryByText("Carta 2 - Carro do ovo")).not.toBeInTheDocument();
     expect(screen.queryByText("Carta 3 - Van de transporte")).not.toBeInTheDocument();
@@ -231,9 +218,7 @@ describe("11 - Crie o filtro por raridade da carta", () => {
 
     const filterRareInput = screen.getByTestId(/rare-filter/i);
     userEvent.selectOptions(filterRareInput, "todas");
-
-    const filterBtn = screen.getByTestId(/filter-btn/i);
-    userEvent.click(filterBtn);
+    
 
     expect(screen.getByText("Carta 1 - Uno de Escada")).toBeInTheDocument();
     expect(screen.getByText("Carta 2 - Carro do ovo")).toBeInTheDocument();
@@ -288,10 +273,8 @@ describe("11 - Crie o filtro por raridade da carta", () => {
 
     const filterRareInput = screen.getByTestId(/rare-filter/i);
     userEvent.selectOptions(filterRareInput, "muito raro");
-
-    const filterBtn = screen.getByTestId(/filter-btn/i);
-    userEvent.click(filterBtn);
     
+
     expect(screen.queryByText("Carta 1 - Uno de Escada")).not.toBeInTheDocument();
     expect(screen.queryByText("Carta 2 - Carro do ovo")).not.toBeInTheDocument();
     expect(screen.queryByText("Carta 3 - Van de transporte")).not.toBeInTheDocument();
