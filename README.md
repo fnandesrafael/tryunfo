@@ -54,7 +54,7 @@ No mais, o restante das dependencias e módulos também foram disponibilizados p
 
 > Frontend
 ```bash
-cd src/
+cd project-tryunfo/
 npm install
 ``` 
 > Executando a aplicação
