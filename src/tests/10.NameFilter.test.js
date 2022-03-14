@@ -62,6 +62,9 @@ describe("10 - Crie o filtro pelo nome da carta", () => {
     const filterNameInput = screen.getByTestId(/name-filter/i);
     userEvent.type(filterNameInput, "Bebedouro");
 
+    const filterBtn = screen.getByTestId(/filter-btn/i);
+    userEvent.click(filterBtn);
+
     expect(screen.getByText("Carta 1 - Bebedouro de Guarulhos")).toBeInTheDocument();
     expect(screen.getByText("Carta 2 - Bebedouro de Bebedouro")).toBeInTheDocument();
     expect(screen.queryByText("Carta 3 - Fonte natural")).not.toBeInTheDocument();
@@ -91,6 +94,9 @@ describe("10 - Crie o filtro pelo nome da carta", () => {
 
     const filterNameInput = screen.getByTestId(/name-filter/i);
     userEvent.type(filterNameInput, "Escavadeira");
+
+    const filterBtn = screen.getByTestId(/filter-btn/i);
+    userEvent.click(filterBtn);
     
     expect(screen.queryByText("Carta 1 - Bebedouro de Guarulhos")).not.toBeInTheDocument();
   });

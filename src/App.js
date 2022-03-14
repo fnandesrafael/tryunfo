@@ -15,7 +15,7 @@ class App extends React.Component {
       cardAttr2: '0',
       cardAttr3: '0',
       cardImage: '',
-      cardRare: 'Normal',
+      cardRare: 'normal',
       cardTrunfo: false,
       token: '',
       isSaveButtonDisabled: true,
@@ -26,6 +26,8 @@ class App extends React.Component {
       */
       tryunfoDeckBackup: [],
       hasTrunfo: false,
+      nameFilter: '',
+      rareFilter: 'todas',
     };
   }
 
@@ -124,16 +126,16 @@ class App extends React.Component {
     });
   }
 
-  onChangeNameFilter = ({ target }) => {
+  onClickFilter = () => {
+    const { tryunfoDeckBackup, nameFilter, rareFilter } = this.state;
+    const filteredDeck = tryunfoDeckBackup.filter((card) => card.cardName.toLowerCase()
+      .includes(nameFilter.toLowerCase())
+        && (card.cardRare === rareFilter || rareFilter === 'todas'));
     this.setState({
-      tryunfoDeck: this.filterByName(target.value.toLowerCase()),
+      tryunfoDeck: filteredDeck,
     });
-  }
-
-  filterByName = (name) => {
-    const { tryunfoDeckBackup } = this.state;
-    return tryunfoDeckBackup.filter((card) => card.cardName.toLowerCase().includes(name));
-  }
+    return filteredDeck;
+  };
 
   render() {
     const
@@ -190,7 +192,8 @@ class App extends React.Component {
         </div>
         <h1 className="deck-title">Seu Deck</h1>
         <DeckFilters
-          onChangeNameFilter={ this.onChangeNameFilter }
+          onInputChange={ this.onInputChange }
+          onClickFilter={ this.onClickFilter }
         />
         <div className="deck-display">
           {
