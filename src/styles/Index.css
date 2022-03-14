@@ -10,6 +10,7 @@ code {
 
 .create-card-space {
   background-color: #0a090c;
+  background-size: 100%;
   border-bottom: 0.5rem solid #030304;
   display: flex;
   flex-direction: row;

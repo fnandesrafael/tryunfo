@@ -1,6 +1,7 @@
 .card-background {
   align-items: center;
-  background-color: #030304;
+  background: linear-gradient(#000000da, #000000da, black, black) , url('https://tcg.pokemon.com/assets/img/home/wallpapers/wallpaper-53.jpg') no-repeat;
+  background-size: 150%;
   color: white;
   display: flex;
   flex-direction: column;
@@ -12,7 +13,6 @@
 .card-body {
   align-items: center;
   background-color: #23222b;
-  border-radius: 0.25rem;
   box-shadow: 0 0 0 1rem #161922;
   color: #fbfbfb;
   display: flex;
@@ -43,7 +43,6 @@
 
 .attribute-display {
   background-color: #74a9f6;
-  border-radius: 0.25rem;
   color: #030304;
   font-size: 1rem;
   margin: 0 1rem;

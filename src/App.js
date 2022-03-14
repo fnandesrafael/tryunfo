@@ -201,7 +201,6 @@ class App extends React.Component {
         <div className="deck-content">
           <DeckFilters
             onInputChange={ this.onInputChange }
-          // onClickFilter={ this.onClickFilter }
           />
           <div className="deck-display">
             {
