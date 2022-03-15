@@ -1,6 +1,6 @@
 # Tryunfo
 
-<a href="https://rafaelimaf.github.io/project-tryunfo/" >Execute a aplicação aqui!<a>
+<a href="https://rafaelimaf.github.io/project-tryunfo/" >Execute a aplicação clicando aqui!<a>
 
 ## Contexto
 Este projeto foi desenvolvido ao longo do módulo de front-end na Trybe. Sendo o segundo projeto do módulo, foi desenvolvido um jogo no estilo Super Trunfo, onde é possível criar novas cartas e listar as cartas já existentes no baralho. Tudo isso de forma dinâmica, usando formulários e o estado da aplicação.
@@ -14,6 +14,7 @@ Front-end:
   <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
   <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="left" height="50" width="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/602px-Bootstrap_logo.svg.png">
 </div>
 </br>
 </br>
