@@ -5,16 +5,16 @@ export default class Header extends Component {
     return (
       <header>
         <nav
-          className="navbar navbar-expand-lg navbar-dark bg-dark container-fluid
-        align-items-center"
+          className="navbar navbar-expand-lg navbar-light bg-light container-fluid
+        align-items-center fixed-top shadow"
         >
-          <a className="navbar-brand p-2" href="/">
+          <a className="navbar-brand p-2 mx-0" href="/">
             <h2 className="h2">
               Tryunfo
             </h2>
           </a>
           <p className="text-muted my-1">by Rafael de Lima</p>
-          <ul className="ml-auto navbar-nav">
+          <ul className="ms-auto navbar-nav">
             <li className="nav-item">
               <a
                 href="https://github.com/rafaelimaf"

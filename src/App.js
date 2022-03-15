@@ -162,24 +162,32 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <div className="create-card-space">
-          <Form
-            cardName={ cardName }
-            cardDescription={ cardDescription }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardImage={ cardImage }
-            cardRare={ cardRare }
-            cardTrunfo={ cardTrunfo }
-            hasTrunfo={ hasTrunfo }
-            isSaveButtonDisabled={ isSaveButtonDisabled }
-            onInputChange={ this.onInputChange }
-            onSaveButtonClick={ this.onSaveButtonClick }
-          />
-          <div className="card-background">
+        <div className="container-fluid d-flex flex-row pb-5">
+          <div className="container-fluid d-flex flex-column">
             <h2
-              className="card-title"
+              className="fs-2 text-center mb-5"
+            >
+              Adicionar Nova Carta
+
+            </h2>
+            <Form
+              cardName={ cardName }
+              cardDescription={ cardDescription }
+              cardAttr1={ cardAttr1 }
+              cardAttr2={ cardAttr2 }
+              cardAttr3={ cardAttr3 }
+              cardImage={ cardImage }
+              cardRare={ cardRare }
+              cardTrunfo={ cardTrunfo }
+              hasTrunfo={ hasTrunfo }
+              isSaveButtonDisabled={ isSaveButtonDisabled }
+              onInputChange={ this.onInputChange }
+              onSaveButtonClick={ this.onSaveButtonClick }
+            />
+          </div>
+          <div className="container-fluid d-flex flex-column align-items-center">
+            <h2
+              className="fs-2 text-center mb-5 pb-4 border-bottom"
             >
               Pré Visualização da Carta
 
@@ -196,16 +204,16 @@ class App extends React.Component {
             />
           </div>
         </div>
-        <h1 className="deck-title">Seu Deck</h1>
-        <div className="deck-content">
-          <DeckFilters
-            onInputChange={ this.onInputChange }
-          />
-          <div className="deck-display">
+        <div className="container-fluid p-0">
+          <DeckFilters onInputChange={ this.onInputChange } />
+          <div
+            className="container-fluid d-flex flex-row flex-wrap justify-content-start
+          align-items-center"
+          >
             {
               tryunfoDeck.map((card) => (
                 <div
-                  className="single-card"
+                  className="content d-flex flex-column align-items-center"
                   key={ card.token }
                 >
                   <Card
@@ -223,7 +231,7 @@ class App extends React.Component {
                   <button
                     type="button"
                     data-testid="delete-button"
-                    className="delete-button"
+                    className="btn btn-primary my-5"
                     onClick={ this.onClickDelete }
                   >
                     Excluir

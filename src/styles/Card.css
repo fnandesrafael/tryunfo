@@ -1,79 +1,47 @@
-.card-background {
-  align-items: center;
-  background: linear-gradient(#000000da, #000000da, black, black) , url('https://tcg.pokemon.com/assets/img/home/wallpapers/wallpaper-53.jpg') no-repeat;
-  background-size: 150%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  height: 40rem;
-  padding: 1rem;
-  width: 40rem;
-}
-
 .card-body {
-  align-items: center;
-  background-color: #23222b;
-  box-shadow: 0 0 0 1rem #161922;
-  color: #fbfbfb;
-  display: flex;
-  flex-direction: column;
-  height: 29rem;
-  margin: 2rem 4rem;
-  width: 18rem;
+  background: #ced4d8;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 0.6rem #fbfbfb;
+  width: 21.8rem;
 }
 
-.name-display {
-  align-items: left;
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
+.card-name {
+  background: linear-gradient(268.41deg, #0084ff 0%, #b673eb 100%);
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.5rem 3rem;
 }
 
-.image-display {
-  background-color: #161922;
-  padding: 0.5rem 6rem;
-  width: 6rem;
+.card-trunfo {
+  background: linear-gradient(268.41deg, #0084ff 0%, #b673eb 100%);
+  padding: 0.5rem 3rem;
 }
 
-.attributes-group {
-  display: flex;
-  flex-direction: row;
-  margin: 1rem;
+.card-image {
+  height: 11rem;
+  margin-left: 5.5rem;
 }
 
-.attribute-display {
-  background-color: #74a9f6;
-  color: #030304;
-  font-size: 1rem;
-  margin: 0 1rem;
-  padding: 0.75rem 1.5rem;
+.card-rare {
+  background: linear-gradient(268.41deg, #0084ff 0%, #eb73e1 100%);
+  padding: 0.5rem 3rem;
 }
 
-.trunfo-display {
-  margin-top: 0.5rem;
-}
-
-.rare-display {
-  background-color: #0a2d53;
-  color: #fbfbfb;
-  margin: 0;
-  padding: 1rem 0;
-  text-align: center;
-  text-transform: capitalize;
-  width: 18rem;
-}
-
-.description-display {
-  background-color: #74a9f6;
-  color: #030304;
-  margin: 0;
+.card-description {
+  height: 10rem;
   overflow-y: scroll;
-  padding: 0.5rem;
-  text-align: center;
 }
 
-.attr-title {
-  font-size: 15px;
-  margin-top: 0;
-  text-align: center;
+.card-description::-webkit-scrollbar, .card-description::-webkit-scrollbar-thumb {
+  border: 1px solid #b673eb;
+  width: 0.5rem;
+}
+
+.card-description::-webkit-scrollbar-thumb {
+  background-color: #b673eb;
+}
+
+.card-attr {
+  background: linear-gradient(210deg, #0084ff 0%, #eb73e1 100%);
+  border-radius: 0 0 1rem 1rem;
+  padding: 0.5rem 2rem;
 }
