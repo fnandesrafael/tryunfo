@@ -2,7 +2,6 @@ import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import Header from './components/Header';
-import './styles/Deck.css';
 import DeckFilters from './components/DeckFilters';
 
 class App extends React.Component {
