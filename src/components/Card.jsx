@@ -18,76 +18,75 @@ export default class Card extends Component {
       } = this.props;
     return (
       <div
-        className="card-body"
+        className="container card-body mx-5"
         id={ token }
       >
-        <h3
+        <h4
           data-testid="name-card"
-          className="name-display"
+          className="fs-4 fw-bold text-center card-name"
         >
           { cardName }
 
-        </h3>
+        </h4>
+        {cardTrunfo === true ? (
+          <h3
+            data-testid="trunfo-card"
+            className="fs-6 fw-bold text-center card-trunfo"
+          >
+            Super Trunfo ⭐
+          </h3>
+        ) : (
+          <h3 className="fs-6 fw-bold text-center card-trunfo">
+            Carta Comum
+          </h3>
+        )}
         <img
           src={ cardImage }
           alt={ cardName }
           data-testid="image-card"
-          className="image-display"
+          className="image-fluid card-image"
         />
-        <div className="attributes-group">
-          <label htmlFor="attr1">
-            <h3 className="attr-title">ATTR 01</h3>
-            <h5
-              data-testid="attr1-card"
-              className="attribute-display"
-            >
-              { cardAttr1 }
-
-            </h5>
-          </label>
-          <label htmlFor="attr2">
-            <h3 className="attr-title">ATTR 02</h3>
-            <h5
-              data-testid="attr2-card"
-              className="attribute-display"
-            >
-              { cardAttr2 }
-
-            </h5>
-          </label>
-          <label htmlFor="attr3">
-            <h3 className="attr-title">ATTR 03</h3>
-            <h5
-              data-testid="attr3-card"
-              className="attribute-display"
-            >
-              { cardAttr3 }
-
-            </h5>
-          </label>
-        </div>
-        {cardTrunfo === true ? (
-          <h3
-            data-testid="trunfo-card"
-            className="trunfo-display"
-          >
-            Super Trunfo ⭐
-
-          </h3>
-        ) : null}
         <h4
           data-testid="rare-card"
-          className="rare-display"
+          className="h5 text-center text-capitalize fw-bold card-rare"
         >
-          {`Raridade: ${cardRare}`}
-
+          {cardRare }
         </h4>
         <p
           data-testid="description-card"
-          className="description-display"
+          className="fs-6 text-break text-center p-2 card-description"
         >
           {cardDescription}
         </p>
+        <div className="container d-flex justify-content-around">
+          <label htmlFor="attr1">
+            <h5
+              name="attr1"
+              data-testid="attr1-card"
+              className="fs-4 fw-bold m-2 card-attr"
+            >
+              { cardAttr1 }
+            </h5>
+          </label>
+          <label htmlFor="attr2">
+            <h5
+              name="attr2"
+              data-testid="attr2-card"
+              className="fs-4 fw-bold m-2 card-attr"
+            >
+              { cardAttr2 }
+            </h5>
+          </label>
+          <label htmlFor="attr3">
+            <h5
+              name="attr3"
+              data-testid="attr3-card"
+              className="fs-4 fw-bold m-2 card-attr"
+            >
+              { cardAttr3 }
+            </h5>
+          </label>
+        </div>
       </div>
     );
   }

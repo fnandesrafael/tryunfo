@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../styles/Form.css';
 
 export default class Form extends Component {
   render() {
@@ -20,43 +19,44 @@ export default class Form extends Component {
         hasTrunfo,
       } = this.props;
     return (
-      <div className="form-body">
-        <h2>Adicionar Nova Carta</h2>
-        <label
-          htmlFor="cardName"
-          className="name-space"
-        >
-          <h3>Nome:</h3>
+      <div className="container-fluid d-flex flex-column w-75">
+        <label htmlFor="cardName">
+          <h3 className="fs-5">
+            Nome:
+          </h3>
           <input
             name="cardName"
             type="text"
             data-testid="name-input"
             value={ cardName }
             onChange={ onInputChange }
-            className="input-tag"
+            className="form-control"
           />
         </label>
         <label
           htmlFor="cardImage"
           className="image-space"
         >
-          <h3>Imagem:</h3>
+          <h3 className="fs-5 mt-3">
+            Imagem:
+          </h3>
           <input
             name="cardImage"
             type="text"
             data-testid="image-input"
             value={ cardImage }
             onChange={ onInputChange }
-            className="input-tag"
-
+            className="form-control"
           />
         </label>
-        <div className="attribute-spaces">
-          <label
-            htmlFor="attr1"
-            className="attribute-space"
-          >
-            <h3>Atributo 1</h3>
+        <div
+          className="container-fluid d-flex flex-row justify-content-between p-0
+        align-items-center"
+        >
+          <label htmlFor="attr1">
+            <h3 className="fs-5 mt-3">
+              Atributo 1:
+            </h3>
             <input
               name="cardAttr1"
               type="number"
@@ -65,14 +65,13 @@ export default class Form extends Component {
               onChange={ onInputChange }
               min="0"
               max="90"
-              className="input-tag"
+              className="form-control"
             />
           </label>
-          <label
-            htmlFor="attr2"
-            className="attribute-space"
-          >
-            <h3>Atributo 2</h3>
+          <label htmlFor="attr2">
+            <h3 className="fs-5 mt-3">
+              Atributo 2:
+            </h3>
             <input
               name="cardAttr2"
               type="number"
@@ -81,14 +80,13 @@ export default class Form extends Component {
               onChange={ onInputChange }
               min="0"
               max="90"
-              className="input-tag"
+              className="form-control"
             />
           </label>
-          <label
-            htmlFor="attr3"
-            className="attribute-space"
-          >
-            <h3>Atributo 3</h3>
+          <label htmlFor="attr3">
+            <h3 className="fs-5 mt-3">
+              Atributo 3:
+            </h3>
             <input
               name="cardAttr3"
               type="number"
@@ -97,38 +95,50 @@ export default class Form extends Component {
               onChange={ onInputChange }
               min="0"
               max="90"
-              className="input-tag"
+              className="form-control"
             />
           </label>
         </div>
-        <div className="rarity-spaces">
+        <div
+          className="container-fluid d-flex flex-row justify-content-between
+        align-items-center p-0 mt-3"
+        >
           {
             hasTrunfo ? (
-              <p>Você já tem um Super Trunfo em seu baralho.</p>
+              <p className="fs-6 m-0 text-muted">
+                Você já tem um Super Trunfo em seu baralho.
+              </p>
             ) : (
-              <label
-                htmlFor="cardTrunfo"
-                className="trunfo-space"
-              >
-                <h3>Super Trunfo</h3>
-                <input
-                  name="cardTrunfo"
-                  type="checkbox"
-                  data-testid="trunfo-input"
-                  checked={ cardTrunfo }
-                  onChange={ onInputChange }
-                  className="trunfo-check"
-                />
-              </label>
+              <>
+                <h3 className="fs-5 m-0">
+                  Super Trunfo
+                </h3>
+                <label
+                  htmlFor="cardTrunfo"
+                  className="form-check-label"
+                >
+                  <input
+                    name="cardTrunfo"
+                    type="checkbox"
+                    data-testid="trunfo-input"
+                    checked={ cardTrunfo }
+                    onChange={ onInputChange }
+                    className="form-check-input"
+                  />
+                </label>
+              </>
             )
           }
+          <h3 className="fs-5 m-0 mx-3">
+            Raridade:
+          </h3>
           <label htmlFor="cardRare">
             <select
               name="cardRare"
               data-testid="rare-input"
               value={ cardRare }
               onChange={ onInputChange }
-              className="rare-input"
+              className="form-select"
             >
               <option value="normal">Normal</option>
               <option value="raro">Raro</option>
@@ -136,26 +146,21 @@ export default class Form extends Component {
             </select>
           </label>
         </div>
-        <label
-          htmlFor="description"
-          className="description-space"
-        >
-          <textarea
-            name="cardDescription"
-            cols="30"
-            rows="10"
-            data-testid="description-input"
-            value={ cardDescription }
-            onChange={ onInputChange }
-            className="description-input"
-          />
-        </label>
+        <textarea
+          name="cardDescription"
+          cols="30"
+          rows="10"
+          data-testid="description-input"
+          value={ cardDescription }
+          onChange={ onInputChange }
+          className="form-control mt-3 h-75"
+        />
         <button
           data-testid="save-button"
           type="submit"
           disabled={ isSaveButtonDisabled }
           onClick={ onSaveButtonClick }
-          className="save-btn"
+          className="btn btn-primary w-25 align-self-center mt-3"
         >
           Salvar
         </button>
