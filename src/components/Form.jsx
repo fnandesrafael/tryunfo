@@ -20,12 +20,8 @@ export default class Form extends Component {
       } = this.props;
     return (
       <div className="container-fluid d-flex flex-column w-75">
-        <label
-          htmlFor="cardName"
-        >
-          <h3
-            className="fs-5"
-          >
+        <label htmlFor="cardName">
+          <h3 className="fs-5">
             Nome:
           </h3>
           <input
@@ -41,9 +37,7 @@ export default class Form extends Component {
           htmlFor="cardImage"
           className="image-space"
         >
-          <h3
-            className="fs-5 mt-3"
-          >
+          <h3 className="fs-5 mt-3">
             Imagem:
           </h3>
           <input
@@ -53,19 +47,14 @@ export default class Form extends Component {
             value={ cardImage }
             onChange={ onInputChange }
             className="form-control"
-
           />
         </label>
         <div
           className="container-fluid d-flex flex-row justify-content-between p-0
         align-items-center"
         >
-          <label
-            htmlFor="attr1"
-          >
-            <h3
-              className="fs-5 mt-3"
-            >
+          <label htmlFor="attr1">
+            <h3 className="fs-5 mt-3">
               Atributo 1:
             </h3>
             <input
@@ -79,12 +68,8 @@ export default class Form extends Component {
               className="form-control"
             />
           </label>
-          <label
-            htmlFor="attr2"
-          >
-            <h3
-              className="fs-5 mt-3"
-            >
+          <label htmlFor="attr2">
+            <h3 className="fs-5 mt-3">
               Atributo 2:
             </h3>
             <input
@@ -98,12 +83,8 @@ export default class Form extends Component {
               className="form-control"
             />
           </label>
-          <label
-            htmlFor="attr3"
-          >
-            <h3
-              className="fs-5 mt-3"
-            >
+          <label htmlFor="attr3">
+            <h3 className="fs-5 mt-3">
               Atributo 3:
             </h3>
             <input
@@ -124,16 +105,12 @@ export default class Form extends Component {
         >
           {
             hasTrunfo ? (
-              <p
-                className="fs-6 m-0 text-muted"
-              >
+              <p className="fs-6 m-0 text-muted">
                 Você já tem um Super Trunfo em seu baralho.
               </p>
             ) : (
               <>
-                <h3
-                  className="fs-5 m-0"
-                >
+                <h3 className="fs-5 m-0">
                   Super Trunfo
                 </h3>
                 <label
@@ -152,9 +129,7 @@ export default class Form extends Component {
               </>
             )
           }
-          <h3
-            className="fs-5 m-0 mx-3"
-          >
+          <h3 className="fs-5 m-0 mx-3">
             Raridade:
           </h3>
           <label htmlFor="cardRare">

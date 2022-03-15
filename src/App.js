@@ -164,11 +164,8 @@ class App extends React.Component {
         <Header />
         <div className="container-fluid d-flex flex-row pb-5">
           <div className="container-fluid d-flex flex-column">
-            <h2
-              className="fs-2 text-center mb-5"
-            >
+            <h2 className="fs-2 text-center mb-5">
               Adicionar Nova Carta
-
             </h2>
             <Form
               cardName={ cardName }
@@ -186,11 +183,8 @@ class App extends React.Component {
             />
           </div>
           <div className="container-fluid d-flex flex-column align-items-center">
-            <h2
-              className="fs-2 text-center mb-5 pb-4 border-bottom"
-            >
+            <h2 className="fs-2 text-center mb-5 pb-4 border-bottom">
               Pré Visualização da Carta
-
             </h2>
             <Card
               cardName={ cardName }
@@ -207,8 +201,8 @@ class App extends React.Component {
         <div className="container-fluid p-0">
           <DeckFilters onInputChange={ this.onInputChange } />
           <div
-            className="container-fluid d-flex flex-row flex-wrap justify-content-start
-          align-items-center"
+            className="container-fluid d-flex flex-row flex-wrap
+          justify-content-start align-items-center"
           >
             {
               tryunfoDeck.map((card) => (

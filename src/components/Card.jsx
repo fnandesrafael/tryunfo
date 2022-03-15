@@ -34,12 +34,9 @@ export default class Card extends Component {
             className="fs-6 fw-bold text-center card-trunfo"
           >
             Super Trunfo ⭐
-
           </h3>
         ) : (
-          <h3
-            className="fs-6 fw-bold text-center card-trunfo"
-          >
+          <h3 className="fs-6 fw-bold text-center card-trunfo">
             Carta Comum
           </h3>
         )}
@@ -54,7 +51,6 @@ export default class Card extends Component {
           className="h5 text-center text-capitalize fw-bold card-rare"
         >
           {cardRare }
-
         </h4>
         <p
           data-testid="description-card"
@@ -70,7 +66,6 @@ export default class Card extends Component {
               className="fs-4 fw-bold m-2 card-attr"
             >
               { cardAttr1 }
-
             </h5>
           </label>
           <label htmlFor="attr2">
@@ -80,7 +75,6 @@ export default class Card extends Component {
               className="fs-4 fw-bold m-2 card-attr"
             >
               { cardAttr2 }
-
             </h5>
           </label>
           <label htmlFor="attr3">
@@ -90,7 +84,6 @@ export default class Card extends Component {
               className="fs-4 fw-bold m-2 card-attr"
             >
               { cardAttr3 }
-
             </h5>
           </label>
         </div>
