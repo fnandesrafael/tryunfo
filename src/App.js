@@ -183,7 +183,7 @@ class App extends React.Component {
             />
           </div>
           <div className="container-fluid d-flex flex-column align-items-center">
-            <h2 className="fs-2 text-center mb-5 pb-4 border-bottom">
+            <h2 className="fs-2 text-center mb-5 pb-4">
               Pré Visualização da Carta
             </h2>
             <Card
@@ -202,7 +202,7 @@ class App extends React.Component {
           <DeckFilters onInputChange={ this.onInputChange } />
           <div
             className="container-fluid d-flex flex-row flex-wrap
-          justify-content-start align-items-center"
+          justify-content-around align-items-center"
           >
             {
               tryunfoDeck.map((card) => (

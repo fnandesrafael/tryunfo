@@ -5,7 +5,10 @@ export default class DeckFilters extends Component {
   render() {
     const { onInputChange } = this.props;
     return (
-      <div className="container-fluid d-flex flex-column bg-dark text-light mb-5">
+      <div
+        className="container-fluid d-flex flex-column bg-dark text-light mb-5
+      shadow"
+      >
         <h2
           className="fs-2 text-center py-5 mb-0 border-bottom text-light
         bg-dark"
