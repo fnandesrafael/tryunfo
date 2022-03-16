@@ -1,13 +1,14 @@
 .card-body {
   background: #ced4d8;
+  border: 1rem solid #fbfbfb;
   border-radius: 0.5rem;
-  box-shadow: 0 0 0 0.6rem #fbfbfb;
   width: 21.8rem;
 }
 
 .card-name {
   background: linear-gradient(268.41deg, #0084ff 0%, #b673eb 100%);
   border-radius: 0.5rem 0.5rem 0 0;
+  height: 3rem;
   padding: 0.5rem 3rem;
 }
 
@@ -17,12 +18,15 @@
 }
 
 .card-image {
+  border: 1px #ced4d8;
   height: 11rem;
-  margin-left: 5.5rem;
+  margin-left: 3.5rem;
+  width: 11rem;
 }
 
 .card-rare {
   background: linear-gradient(268.41deg, #0084ff 0%, #eb73e1 100%);
+  margin-top: 0.5rem;
   padding: 0.5rem 3rem;
 }
 
