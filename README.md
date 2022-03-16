@@ -1,12 +1,24 @@
 # Tryunfo
 
+<a href="https://rafaelimaf.github.io/project-tryunfo/" >Execute a aplicação clicando aqui!<a>
+
 ## Contexto
 Este projeto foi desenvolvido ao longo do módulo de front-end na Trybe. Sendo o segundo projeto do módulo, foi desenvolvido um jogo no estilo Super Trunfo, onde é possível criar novas cartas e listar as cartas já existentes no baralho. Tudo isso de forma dinâmica, usando formulários e o estado da aplicação.
 
 ## Técnologias usadas
 
 Front-end:
-> Desenvolvido usando: React, CSS3, HTML5, ES6
+> Desenvolvido usando: ES6, React, HTML5, CSS3 e Bootstrap
+<div style="display: inline_block"><br>
+  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="left" height="50" width="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/602px-Bootstrap_logo.svg.png">
+</div>
+</br>
+</br>
+</br>
 
 ## No decorrer desse projeto, foram aprendidos e exercitados os seguintes conceitos:
 - Ler o estado de um componente e usá-lo para alterar o que exibimos no browser;
@@ -43,21 +55,14 @@ No mais, o restante das dependencias e módulos também foram disponibilizados p
 
 > Frontend
 ```bash
-cd src/
+cd project-tryunfo/
 npm install
 ``` 
-## Executando aplicação
-
-  ```
-* Para rodar o front-end:
-
+> Executando a aplicação
   ```
     cd src/ && npm start
   ```
-
-## Executando Testes
-
-* Para rodar todos os testes:
+> Executando testes
 
   ```
     npm test
