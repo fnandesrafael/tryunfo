@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default class Form extends Component {
+  componentDidMount() {
+    Aos.init({ duration: 1500 });
+  }
+
   render() {
     const
       {
@@ -19,7 +25,10 @@ export default class Form extends Component {
         hasTrunfo,
       } = this.props;
     return (
-      <div className="container-fluid d-flex flex-column w-75">
+      <div
+        className="container-fluid d-flex flex-column w-75"
+        data-aos="fade-right"
+      >
         <label htmlFor="cardName">
           <h3 className="fs-5">
             Nome:
@@ -153,7 +162,7 @@ export default class Form extends Component {
           data-testid="description-input"
           value={ cardDescription }
           onChange={ onInputChange }
-          className="form-control mt-3 h-75"
+          className="form-control mt-3 h-50"
         />
         <button
           data-testid="save-button"
