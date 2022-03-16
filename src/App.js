@@ -167,7 +167,7 @@ class App extends React.Component {
       <>
         <Header />
         <div className="container-fluid d-flex flex-row py-5">
-          <div className="container-fluid d-flex flex-column justify-content-around">
+          <div className="container-fluid d-flex flex-column justify-content-around ms-4">
             <h2 className="fs-2 text-center mb-5" data-aos="fade-down">
               Adicionar Nova Carta
             </h2>
