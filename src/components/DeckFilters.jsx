@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default class DeckFilters extends Component {
+  componentDidMount() {
+    Aos.init({ duration: 1000 });
+  }
+
   render() {
     const { onInputChange } = this.props;
     return (
       <div
         className="container-fluid d-flex flex-column bg-dark text-light mb-5
       shadow"
+        data-aos="fade-right"
       >
         <h2
-          className="fs-2 text-center py-5 mb-0 border-bottom text-light
+          className="fs-2 text-center py-4 mb-0 border-bottom text-light
         bg-dark"
         >
           Seu Deck
         </h2>
-        <div className="container-fluid">
+        <div className="container-fluid" data-aos="fade-up">
           <h3 className="fs-5 mt-3">Filtrar por nome:</h3>
           <input
             name="nameFilter"
@@ -25,7 +32,7 @@ export default class DeckFilters extends Component {
             className="form-control"
           />
         </div>
-        <div className="container-fluid">
+        <div className="container-fluid" data-aos="fade-up">
           <h3 className="fs-5 mt-3">Filtrar por raridade:</h3>
           <select
             name="rareFilter"
@@ -39,7 +46,10 @@ export default class DeckFilters extends Component {
             <option value="muito raro">Muito Raro</option>
           </select>
         </div>
-        <div className="container-fluid d-flex flex-row align-items-center mt-3 mb-3">
+        <div
+          className="container-fluid d-flex flex-row align-items-center mt-3 mb-3"
+          data-aos="fade-up"
+        >
           <h5 className="fs-5 m-0 me-3">Somente Super Trunfo</h5>
           <label
             htmlFor="trunfoFilter"

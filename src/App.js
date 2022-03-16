@@ -1,8 +1,11 @@
 import React from 'react';
+import Aos from 'aos';
 import Form from './components/Form';
 import Card from './components/Card';
 import Header from './components/Header';
 import DeckFilters from './components/DeckFilters';
+import 'aos/dist/aos.css';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   constructor() {
@@ -29,6 +32,10 @@ class App extends React.Component {
       rareFilter: 'todas',
       trunfoFilter: false,
     };
+  }
+
+  componentDidMount() {
+    Aos.init({ duration: 1000 });
   }
 
   onInputChange = ({ target }) => {
@@ -148,10 +155,7 @@ class App extends React.Component {
       {
         cardName,
         cardDescription,
-        cardAttr1,
-        cardAttr2,
-        cardAttr3,
-        cardImage,
+        cardAttr1, cardAttr2, cardAttr3, cardImage,
         cardRare,
         cardTrunfo,
         isSaveButtonDisabled,
@@ -162,9 +166,9 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <div className="container-fluid d-flex flex-row pb-5">
+        <div className="container-fluid d-flex flex-row py-5">
           <div className="container-fluid d-flex flex-column justify-content-around">
-            <h2 className="fs-2 text-center mb-5">
+            <h2 className="fs-2 text-center mb-5" data-aos="fade-down">
               Adicionar Nova Carta
             </h2>
             <Form
@@ -182,8 +186,8 @@ class App extends React.Component {
               onSaveButtonClick={ this.onSaveButtonClick }
             />
           </div>
-          <div className="container-fluid d-flex flex-column align-items-center">
-            <h2 className="fs-2 text-center mb-5 pb-4">
+          <div className="container-fluid d-flex flex-column align-items-center h-75">
+            <h2 className="fs-2 text-center mb-5" data-aos="fade-left">
               Pré Visualização da Carta
             </h2>
             <Card
@@ -235,6 +239,7 @@ class App extends React.Component {
             }
           </div>
         </div>
+        <Footer />
       </>
     );
   }

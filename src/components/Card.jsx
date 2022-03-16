@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Card.css';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default class Card extends Component {
+  componentDidMount() {
+    Aos.init({ duration: 1000 });
+  }
+
   render() {
     const
       {
@@ -20,6 +26,7 @@ export default class Card extends Component {
       <div
         className="container card-body mx-5"
         id={ token }
+        data-aos="fade-up"
       >
         <h4
           data-testid="name-card"
