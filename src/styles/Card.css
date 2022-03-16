@@ -1,7 +1,7 @@
 .card-body {
   background: #ced4d8;
+  border: 1rem solid #fbfbfb
   border-radius: 0.5rem;
-  box-shadow: 0 0 0 0.6rem #fbfbfb;
   width: 21.8rem;
 }
 
