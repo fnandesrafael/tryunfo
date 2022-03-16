@@ -15,7 +15,7 @@ export default class Header extends Component {
         align-items-center fixed-top shadow"
           data-aos-mirror="true"
         >
-          <a className="navbar-brand p-2 mx-0" href="/">
+          <a className="navbar-brand p-2 mx-0" href="https://rafaelimaf.github.io/project-tryunfo/">
             <h2 className="h2" data-aos="fade-down" data-aos-duration="1000">
               Tryunfo
             </h2>
