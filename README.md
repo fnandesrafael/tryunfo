@@ -8,7 +8,7 @@ Este projeto foi desenvolvido ao longo do módulo de front-end na Trybe. Sendo o
 ## Técnologias usadas
 
 Front-end:
-> Desenvolvido usando: ES6, React, HTML5, CSS3 e Bootstrap
+> Desenvolvido usando: ES6, React, HTML5, CSS3, Bootstrap e AOS
 <div style="display: inline_block"><br>
   <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
