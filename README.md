@@ -10,11 +10,11 @@ Este projeto foi desenvolvido ao longo do módulo de front-end na Trybe. Sendo o
 Front-end:
 > Desenvolvido usando: ES6, React, HTML5, CSS3, Bootstrap e AOS
 <div style="display: inline_block"><br>
-  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="left" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-  <img align="left" height="50" width="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/602px-Bootstrap_logo.svg.png">
+  <img align="left" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="left" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="left" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="left" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="left" height="30" width="40" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/602px-Bootstrap_logo.svg.png">
 </div>
 </br>
 </br>
@@ -34,6 +34,7 @@ A maior parte do projeto foi desenvolvida por mim de forma independente, sendo n
 **No entando, todos os arquivos de testes são integralmente propriedade Intelectual da Trybe, não sendo desenvolvidos por mim, pois estes testes não poderiam ser manipulados já que os mesmos fazem parte do processo avaliativo.**
 
 ## Para este projeto foi preciso implementar os seguintes requisitos:
+### REQUISITOS OBRIGATÓRIOS
   1. Crie o formulário que será usado para adicionar cartas ao baralho
   2. Adicione as props necessárias ao componente de formulário
   3. Crie e renderize o componente Card com as props necessárias
@@ -44,11 +45,12 @@ A maior parte do projeto foi desenvolvida por mim de forma independente, sendo n
   8. Exiba a lista de cartas que estão salvas no estado
   9. Crie um botão para remover uma carta do baralho
   10. Crie o filtro pelo nome da carta
+### REQUISITOS BÔNUS
   11. Crie o filtro por raridade da carta
   12. Crie o filtro de Super Trunfo
 
 
-No mais, o restante das dependencias e módulos também foram disponibilizados pela mesma.
+> No mais, o restante das dependencias e módulos também foram disponibilizados pela mesma.
 
 
 ## Instalando Dependências
