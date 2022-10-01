@@ -8,10 +8,9 @@
 }
 
 .header-title {
-  align-items: center;
+  align-self: center;
   border-bottom: 1px solid black;
   color: white;
-  display: flex;
   font-family: 'Nunito' , sans-serif;
   font-size: 145px;
   font-style: normal;
