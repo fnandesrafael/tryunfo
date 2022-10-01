@@ -10,12 +10,12 @@ export default function App() {
   return (
     <div className="app">
       <Header />
-      <div>
+      <section>
         <CardForm />
         <CardPreview />
         <DeckFilters />
         <Deck />
-      </div>
+      </section>
     </div>
   );
 }
