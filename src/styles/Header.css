@@ -264,8 +264,8 @@
   .header-pokeball-1 {
     animation: pokeball-spin-right 5s linear infinite;
     animation-timing-function: ease-in-out;
-    height: 215px;
-    left: 950px;
+    height: 230px;
+    left: 940px;
     position: absolute;
     top: 5px;
     transform: rotate(10deg) scaleX(-1);
@@ -277,7 +277,7 @@
     height: 150px;
     left: 1075px;
     position: absolute;
-    top: 345px;
+    top: 335px;
     transform: rotate(-5deg);
   }
 
