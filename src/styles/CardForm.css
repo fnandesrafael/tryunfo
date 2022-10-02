@@ -4,7 +4,7 @@
   flex-flow: column;
   height: 1500px;
   justify-content: space-around;
-  left: 89px;
+  left: 100px;
   position: absolute;
   top: 1204px;
   width: 750px;
@@ -159,6 +159,7 @@
   top: 1150px;
   transition: 0.2s ease-in-out;
   width: 150px;
+  z-index: 1;
 }
 
 .save-card-btn:hover {

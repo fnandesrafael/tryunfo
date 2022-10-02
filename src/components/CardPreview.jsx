@@ -1,29 +1,87 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/CardPreview.css';
 import capitalize from '../utils/capitalize';
 
 export default function CardPreview({ value }) {
+  const [isImage, setIsImage] = useState(false);
+
   const { cardName, cardImage, cardDescription,
     cardAttr1, cardAttr2, cardAttr3, cardTrunfo, cardRare } = value;
 
+  useEffect(() => {
+    const verifyCardImage = async () => {
+      const response = /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(cardImage);
+
+      return response ? setIsImage(true) : setIsImage(false);
+    };
+    verifyCardImage();
+  }, [cardImage]);
+
   return (
-    <div className="card-preview">
-      <div>
-        {cardTrunfo ? (<p data-testid="trunfo-card">⭐</p>) : (null)}
-        <h3 data-testid="name-card">{cardName}</h3>
+    <div className="card-preview-section">
+      <h1 className="card-preview-title">Pré-visualize sua carta</h1>
+      <div className="card-preview">
+        <div className="card-preview-upper-container">
+          <div className="card-preview-name-container">
+            <h3 className="card-preview-name" data-testid="name-card">{cardName}</h3>
+            {cardTrunfo ? (
+              <p
+                className="card-preview-trunfo"
+                data-testid="trunfo-card"
+              >
+                ⭐
+              </p>) : (null)}
+          </div>
+          {isImage ? (
+            <img
+              className="card-preview-image"
+              data-testid="image-card"
+              src={ cardImage }
+              alt={ cardName }
+            />
+          ) : (
+            <div className="card-preview-image" />
+          )}
+          <div className="card-preview-attr-container">
+            <h3 className="card-preview-attr-name">VIT</h3>
+            <h3
+              className="card-preview-attr-value"
+              data-testid="attr1-card"
+            >
+              {cardAttr1}
+            </h3>
+            <h3 className="card-preview-attr-name">VEL</h3>
+            <h3
+              className="card-preview-attr-value"
+              data-testid="attr2-card"
+            >
+              {cardAttr2}
+            </h3>
+            <h3 className="card-preview-attr-name">FOR</h3>
+            <h3
+              className="card-preview-attr-value"
+              data-testid="attr3-card"
+            >
+              {cardAttr3}
+            </h3>
+          </div>
+        </div>
+        <div className="card-preview-lower-container">
+          <h3
+            className="card-preview-rare"
+            data-testid="rare-card"
+          >
+            {capitalize(cardRare)}
+          </h3>
+          <p
+            className="card-preview-description"
+            data-testid="description-card"
+          >
+            {cardDescription}
+          </p>
+        </div>
       </div>
-      <img data-testid="image-card" src={ cardImage } alt={ cardName } />
-      <div>
-        <h5>VIT</h5>
-        <h3 data-testid="attr1-card">{cardAttr1}</h3>
-        <h5>VEL</h5>
-        <h3 data-testid="attr2-card">{cardAttr2}</h3>
-        <h5>FOR</h5>
-        <h3 data-testid="attr3-card">{cardAttr3}</h3>
-      </div>
-      <h3 data-testid="rare-card">{capitalize(cardRare)}</h3>
-      <p data-testid="description-card">{cardDescription}</p>
     </div>
   );
 }

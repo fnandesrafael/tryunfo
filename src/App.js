@@ -15,7 +15,7 @@ export default function App() {
     cardAttr2: '0',
     cardAttr3: '0',
     cardTrunfo: false,
-    cardRare: 'muito raro',
+    cardRare: 'normal',
   });
 
   return (

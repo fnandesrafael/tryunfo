@@ -1,5 +1,139 @@
-.card-preview {
-  left: 1050px;
+.card-preview-section {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  height: 1450px;
+  justify-content: space-between;
+  left: 975px;
+  padding: 50px;
   position: absolute;
   top: 1200px;
+  width: 600px;
+}
+
+.card-preview {
+  background-color: #f0f0f0;
+  border-radius: 25px;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 450px;
+  width: 450px;
+}
+
+.card-preview-title {
+  bottom: 1400px;
+  color: black;
+  font-family: 'Nunito';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  height: 89px;
+  left: 225px;
+  line-height: 89px;
+  margin: 0;
+  text-align: center;
+  width: 450px;
+}
+
+.card-preview-upper-container {
+  background-color: #de4141;
+  border-radius: 25px;
+  height: 340px;
+  padding: 15px;
+  width: 420px;
+}
+
+.card-preview-name-container {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  height: 50px;
+  margin: 0;
+}
+
+.card-preview-name {
+  color: white;
+  font-family: 'Nunito';
+  font-size: 35px;
+  font-weight: 600;
+  height: 45px;
+  margin: 0;
+  margin-right: 5px;
+}
+
+.card-preview-trunfo {
+  font-size: 35px;
+  height: 45px;
+  margin: 0;
+}
+
+.card-preview-image {
+  height: 250px;
+  object-fit: cover;
+  width: 250px;
+}
+
+.card-preview-attr-container {
+  flex-flow: column;
+  left: 410px;
+  position: absolute;
+  text-align: center;
+  top: 350px;
+}
+
+.card-preview-attr-name, .card-preview-attr-value {
+  font-family: 'Nunito';
+  font-size: 25px;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+.card-preview-attr-value {
+  background-color: white;
+  border-radius: 45px;
+  box-shadow: 0 21px 19px #00000040;
+  font-size: 35px;
+  height: 45px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  width: 115px;
+}
+
+.card-preview-lower-container {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+.card-preview-rare {
+  border: 5px solid #de4141;
+  border-radius: 45px;
+  font-family: 'Nunito';
+  font-size: 35px;
+  font-weight: 800;
+  margin-top: 75px;
+  padding: 5px 15px;
+  text-align: center;
+  width: 350px;
+}
+
+.card-preview-description {
+  background: white;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 21px 19px #bdbdbd40;
+  color: black;
+  font-family: 'Nunito';
+  font-size: 15px;
+  height: 100px;
+  margin-top: 0;
+  overflow-y: scroll;
+  padding: 25px 15px;
+  text-align: center;
+  width: 350px;
+}
+
+.card-preview-description::-webkit-scrollbar {
+  display: none;
 }
