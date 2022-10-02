@@ -152,12 +152,13 @@ export default function CardForm({ value }) {
           <select
             className="rarity-select"
             name="cardRare"
+            value={ cardData.cardRare }
             onChange={ handleChanger }
             data-testid="rare-input"
           >
             <option value="normal">Normal</option>
             <option value="raro">Raro</option>
-            <option value="muito raro">Super Raro</option>
+            <option value="muito raro">Muito Raro</option>
           </select>
         </div>
         <p className="card-form-input-text">

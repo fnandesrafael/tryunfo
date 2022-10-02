@@ -11,11 +11,11 @@ export default function App() {
     cardName: '',
     cardImage: '',
     cardDescription: '',
-    cardAttr1: 0,
-    cardAttr2: 0,
-    cardAttr3: 0,
+    cardAttr1: '0',
+    cardAttr2: '0',
+    cardAttr3: '0',
     cardTrunfo: false,
-    cardRare: 'normal',
+    cardRare: 'muito raro',
   });
 
   return (
@@ -23,7 +23,7 @@ export default function App() {
       <Header />
       <section>
         <CardForm value={ { cardData, setCardData } } />
-        <CardPreview />
+        <CardPreview value={ cardData } />
         {/* <DeckFilters /> */}
         <Deck />
       </section>
