@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/CardForm.css';
 import PropTypes from 'prop-types';
 
+const ATTRLIMITER = 90;
+const ALLATTRSUMLIMITER = 210;
+
 export default function CardForm({ value }) {
+  const [isSaveBtnDisabled, setIsSaveBtnDisabled] = useState(true);
+
   const { cardData, setCardData } = value;
+
+  // const verifyCardData = () => {
+  //   const { cardName, cardImage, cardDescription,
+  //     cardAttr1, cardAttr2, cardAttr3 } = cardData;
+  //   if (
+  //     cardName !== '' && cardImage !== '' && cardDescription !== ''
+  //     && Number(cardAttr1) >= 0 && Number(cardAttr1) <= ATTRLIMITER
+  //     && Number(cardAttr2) >= 0 && Number(cardAttr2) <= ATTRLIMITER
+  //     && Number(cardAttr3) >= 0 && Number(cardAttr3) <= ATTRLIMITER
+  //     && (Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3)) <= ALLATTRSUMLIMITER
+  //   ) {
+  //     return setIsSaveBtnDisabled(false);
+  //   } return setIsSaveBtnDisabled(true);
+  // };
 
   const handleChanger = ({ target }) => {
     const inputValue = target.type === 'checkbox' ? target.checked : target.value;
@@ -12,6 +31,24 @@ export default function CardForm({ value }) {
       { ...prevState, [target.name]: inputValue }
     ));
   };
+
+  useEffect(() => {
+    const verifyCardData = () => {
+      const { cardName, cardImage, cardDescription,
+        cardAttr1, cardAttr2, cardAttr3 } = cardData;
+      if (
+        cardName !== '' && cardImage !== '' && cardDescription !== ''
+          && Number(cardAttr1) >= 0 && Number(cardAttr1) <= ATTRLIMITER
+          && Number(cardAttr2) >= 0 && Number(cardAttr2) <= ATTRLIMITER
+          && Number(cardAttr3) >= 0 && Number(cardAttr3) <= ATTRLIMITER
+          && (Number(cardAttr1) + Number(cardAttr2)
+          + Number(cardAttr3)) <= ALLATTRSUMLIMITER
+      ) {
+        return setIsSaveBtnDisabled(false);
+      } return setIsSaveBtnDisabled(true);
+    };
+    verifyCardData();
+  }, [cardData]);
 
   return (
     <div className="card-form">
@@ -129,7 +166,6 @@ export default function CardForm({ value }) {
           <select
             className="rarity-select"
             name="cardRare"
-            value={ cardData.cardRare }
             onChange={ handleChanger }
             data-testid="rare-input"
           >
@@ -145,7 +181,7 @@ export default function CardForm({ value }) {
       <button
         className="save-card-btn"
         type="button"
-        disabled
+        disabled={ isSaveBtnDisabled }
         data-testid="save-button"
       >
         Salvar

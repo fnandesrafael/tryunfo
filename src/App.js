@@ -10,6 +10,7 @@ export default function App() {
   const [cardData, setCardData] = useState({
     cardName: '',
     cardImage: '',
+    cardDescription: '',
     cardAttr1: 0,
     cardAttr2: 0,
     cardAttr3: 0,
