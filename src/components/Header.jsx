@@ -36,15 +36,17 @@ export default function Header() {
         >
           Linkedin
         </a>
-        <button
-          type="button"
-          aria-label="button"
-          className="pokeball-btn"
-        >
-          <h3 className="pokeball-btn-text">
-            Go!
-          </h3>
-        </button>
+        <a href="#card-creation">
+          <button
+            type="button"
+            aria-label="button"
+            className="pokeball-btn"
+          >
+            <h3 className="pokeball-btn-text">
+              Go!
+            </h3>
+          </button>
+        </a>
       </div>
     </header>
   );

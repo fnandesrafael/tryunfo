@@ -10,20 +10,6 @@ export default function CardForm({ value }) {
 
   const { cardData, setCardData } = value;
 
-  // const verifyCardData = () => {
-  //   const { cardName, cardImage, cardDescription,
-  //     cardAttr1, cardAttr2, cardAttr3 } = cardData;
-  //   if (
-  //     cardName !== '' && cardImage !== '' && cardDescription !== ''
-  //     && Number(cardAttr1) >= 0 && Number(cardAttr1) <= ATTRLIMITER
-  //     && Number(cardAttr2) >= 0 && Number(cardAttr2) <= ATTRLIMITER
-  //     && Number(cardAttr3) >= 0 && Number(cardAttr3) <= ATTRLIMITER
-  //     && (Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3)) <= ALLATTRSUMLIMITER
-  //   ) {
-  //     return setIsSaveBtnDisabled(false);
-  //   } return setIsSaveBtnDisabled(true);
-  // };
-
   const handleChanger = ({ target }) => {
     const inputValue = target.type === 'checkbox' ? target.checked : target.value;
 
@@ -51,7 +37,7 @@ export default function CardForm({ value }) {
   }, [cardData]);
 
   return (
-    <div className="card-form">
+    <div id="card-creation" className="card-form">
       <h1 className="card-form-title">
         Crie sua carta
       </h1>
