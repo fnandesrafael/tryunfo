@@ -109,7 +109,7 @@
   height: 900px;
   left: -175px;
   position: absolute;
-  top: -120px;
+  top: -95px;
   width: 900px;
   z-index: 1;
 }
@@ -284,10 +284,10 @@
   .header-pokeball-3 {
     animation: pokeball-spin-left 8s linear infinite;
     filter: blur(10px);
-    height: 750px;
+    height: 755px;
     left: -500px;
     position: absolute;
-    top: -250px;
+    top: -275px;
     z-index: 0;
   }
 }
