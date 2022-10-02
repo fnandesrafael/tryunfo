@@ -3,9 +3,8 @@
   display: flex;
   flex-flow: column;
   height: 1500px;
-  justify-content: space-around;
+  justify-content: space-between;
   left: 100px;
-  position: absolute;
   top: 1204px;
   width: 750px;
 }
@@ -154,9 +153,9 @@
   font-size: 20px;
   font-weight: 400;
   height: 60px;
-  left: 1150px;
+  left: 1295px;
   position: absolute;
-  top: 1150px;
+  top: 2250px;
   transition: 0.2s ease-in-out;
   width: 150px;
   z-index: 1;

@@ -23,26 +23,29 @@ export default function CardPreview({ value }) {
       <h1 className="card-preview-title">Pré-visualize sua carta</h1>
       <div className="card-preview">
         <div className="card-preview-upper-container">
-          <div className="card-preview-name-container">
-            <h3 className="card-preview-name" data-testid="name-card">{cardName}</h3>
-            {cardTrunfo ? (
-              <p
-                className="card-preview-trunfo"
-                data-testid="trunfo-card"
-              >
-                ⭐
-              </p>) : (null)}
+          <div className="card-preview-info-container">
+            <h3 className="card-preview-name" data-testid="name-card">
+              {cardName}
+              {cardTrunfo ? (
+                <p
+                  className="card-preview-trunfo"
+                  data-testid="trunfo-card"
+                >
+                  ⭐
+                </p>
+              ) : (null)}
+            </h3>
+            {isImage ? (
+              <img
+                className="card-preview-image"
+                data-testid="image-card"
+                src={ cardImage }
+                alt={ cardName }
+              />
+            ) : (
+              <div className="card-preview-image" />
+            )}
           </div>
-          {isImage ? (
-            <img
-              className="card-preview-image"
-              data-testid="image-card"
-              src={ cardImage }
-              alt={ cardName }
-            />
-          ) : (
-            <div className="card-preview-image" />
-          )}
           <div className="card-preview-attr-container">
             <h3 className="card-preview-attr-name">VIT</h3>
             <h3

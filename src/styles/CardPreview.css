@@ -2,11 +2,9 @@
   align-items: center;
   display: flex;
   flex-flow: column;
-  height: 1450px;
+  height: 1500px;
   justify-content: space-between;
   left: 975px;
-  padding: 50px;
-  position: absolute;
   top: 1200px;
   width: 600px;
 }
@@ -38,17 +36,18 @@
 .card-preview-upper-container {
   background-color: #de4141;
   border-radius: 25px;
+  display: flex;
   height: 340px;
   padding: 15px;
   width: 420px;
 }
 
-.card-preview-name-container {
-  align-items: center;
+.card-preview-info-container {
+  align-items: flex-start;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   height: 50px;
-  margin: 0;
+  margin: 15px 5px;
 }
 
 .card-preview-name {
@@ -75,10 +74,9 @@
 
 .card-preview-attr-container {
   flex-flow: column;
-  left: 410px;
-  position: absolute;
+  left: 1425px;
   text-align: center;
-  top: 350px;
+  top: 1455px;
 }
 
 .card-preview-attr-name, .card-preview-attr-value {
