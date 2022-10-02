@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CardForm from './components/CardForm';
 import CardPreview from './components/CardPreview';
 import Deck from './components/Deck';
@@ -7,11 +7,21 @@ import Header from './components/Header';
 import './styles/App.css';
 
 export default function App() {
+  const [cardData, setCardData] = useState({
+    cardName: '',
+    cardImage: '',
+    cardAttr1: 0,
+    cardAttr2: 0,
+    cardAttr3: 0,
+    cardTrunfo: false,
+    cardRare: 'normal',
+  });
+
   return (
     <div className="app">
       <Header />
       <section>
-        <CardForm />
+        <CardForm value={ { cardData, setCardData } } />
         <CardPreview />
         {/* <DeckFilters /> */}
         <Deck />

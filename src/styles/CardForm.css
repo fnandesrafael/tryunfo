@@ -27,7 +27,7 @@
   border-radius: 25px;
   display: flex;
   flex-flow: column;
-  height: 850px;
+  height: 1150px;
   padding: 50px;
   position: absolute;
   top: 100px;
@@ -63,6 +63,24 @@
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
+}
+
+.card-form-description-input {
+  background: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 21px 19px #bdbdbd40;
+  font-family: 'Nunito';
+  font-size: 20px;
+  font-weight: 400;
+  height: 150px;
+  outline: none;
+  padding: 1rem;
+  width: 570px;
+}
+
+.card-form-description-input::-webkit-scrollbar {
+  display: none;
 }
 
 .attr-inputs {
@@ -126,17 +144,34 @@
 }
 
 .save-card-btn {
-  background: #06f;
+  background: #405cf5;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 21px 19px rgba(189, 189, 189, 0.25);
   color: white;
   font-family: 'Nunito';
   font-size: 20px;
-  font-weight: 800;
-  height: 75px;
-  left: 1200px;
+  font-weight: 400;
+  height: 60px;
+  left: 1150px;
   position: absolute;
-  top: 950px;
+  top: 1150px;
+  transition: 0.2s ease-in-out;
   width: 150px;
+}
+
+.save-card-btn:hover {
+  background: white;
+  border: 1px solid #405cf5;
+  color: #405cf5;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.save-card-btn:disabled {
+  background-color: #3a537938;
+  border: none;
+  color: white;
+  cursor: default;
+  transition: 0.2s ease-in-out;
 }
