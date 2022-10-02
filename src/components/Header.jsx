@@ -20,6 +20,22 @@ export default function Header() {
         <img className="header-pokeball-2" src={ Pokeball } alt="Pokébola" />
       </div>
       <div className="pokeball-line-header">
+        <a
+          className="gh-link"
+          href="https://github.com/rafaelimaf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
+        <a
+          className="in-link"
+          href="https://linkedin.com/in/rafaelimaf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Linkedin
+        </a>
         <button
           type="button"
           aria-label="button"

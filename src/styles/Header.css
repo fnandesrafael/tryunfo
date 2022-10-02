@@ -44,6 +44,38 @@
   width: 100%;
 }
 
+.gh-link {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: 600;
+  left: 700px;
+  position: absolute;
+  text-decoration: none;
+  top: 45px;
+  transition: 0.2s;
+}
+
+.gh-link:hover {
+  color: #de4141;
+  transition: 0.2s;
+}
+
+.in-link {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: 600;
+  left: 600px;
+  position: absolute;
+  text-decoration: none;
+  top: 45px;
+  transition: 0.2s;
+}
+
+.in-link:hover {
+  color: #de4141;
+  transition: 0.2s;
+}
+
 .pokeball-btn {
   background: white;
   border: 2rem solid #393939;
@@ -148,6 +180,38 @@
     width: 100%;
   }
 
+  .gh-link {
+    color: white;
+    font-family: 'Nunito';
+    font-weight: 600;
+    left: 500px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+    transition: 0.2s;
+  }
+
+  .gh-link:hover {
+    color: #de4141;
+    transition: 0.2s;
+  }
+
+  .in-link {
+    color: white;
+    font-family: 'Nunito';
+    font-weight: 600;
+    left: 400px;
+    position: absolute;
+    text-decoration: none;
+    top: 35px;
+    transition: 0.2s;
+  }
+
+  .in-link:hover {
+    color: #de4141;
+    transition: 0.2s;
+  }
+
 
   .pokeball-btn {
     background: white;
@@ -209,15 +273,15 @@
 @keyframes pokeball-spin-right {
 
   0% {
-    transform: scaleX(-1) translateY(0);
-  }
-
-  50% {
     transform: scaleX(-1) translateY(15px);
   }
 
-  100% {
+  50% {
     transform: scaleX(-1) translateY(0);
+  }
+
+  100% {
+    transform: scaleX(-1) translateY(15px);
   }
 
 }
