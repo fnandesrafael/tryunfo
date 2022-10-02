@@ -42,6 +42,7 @@
   position: absolute;
   top: 750px;
   width: 100%;
+  z-index: 2;
 }
 
 .gh-link {
@@ -110,6 +111,7 @@
   position: absolute;
   top: -120px;
   width: 900px;
+  z-index: 1;
 }
 
 .header-pokeball-1 {
@@ -130,6 +132,15 @@
   position: absolute;
   top: 525px;
   transform: rotate(-5deg);
+}
+
+.header-pokeball-3 {
+  animation: pokeball-spin-left 8s linear infinite;
+  filter: blur(10px);
+  left: -750px;
+  position: absolute;
+  top: -350px;
+  z-index: 0;
 }
 
 @media screen and ( max-width : 1366px ) {
@@ -178,6 +189,7 @@
     position: absolute;
     top: 495px;
     width: 100%;
+    z-index: 2;
   }
 
   .gh-link {
@@ -211,7 +223,6 @@
     color: #de4141;
     transition: 0.2s;
   }
-
 
   .pokeball-btn {
     background: white;
@@ -247,6 +258,7 @@
     position: absolute;
     top: -115px;
     width: 650px;
+    z-index: 1;
   }
 
   .header-pokeball-1 {
@@ -267,6 +279,16 @@
     position: absolute;
     top: 345px;
     transform: rotate(-5deg);
+  }
+
+  .header-pokeball-3 {
+    animation: pokeball-spin-left 8s linear infinite;
+    filter: blur(10px);
+    height: 750px;
+    left: -500px;
+    position: absolute;
+    top: -250px;
+    z-index: 0;
   }
 }
 
