@@ -5,6 +5,7 @@ import CardPreview from './components/CardPreview';
 // import DeckFilters from './components/DeckFilters';
 import Header from './components/Header';
 import './styles/App.css';
+import Card from './components/Card';
 
 export default function App() {
   const [cardData, setCardData] = useState({
@@ -16,6 +17,7 @@ export default function App() {
     cardAttr3: '0',
     cardTrunfo: false,
     cardRare: 'normal',
+    deckCards: [],
   });
 
   return (
@@ -24,9 +26,11 @@ export default function App() {
       <section className="card-creation-section">
         <CardForm value={ { cardData, setCardData } } />
         <CardPreview value={ cardData } />
-        {/* <DeckFilters /> */}
       </section>
-      {/* <Deck /> */}
+      <section>
+        {/* <DeckFilters /> */}
+        {cardData.deckCards.map((card, index) => <Card key={ index } value={ card } />)}
+      </section>
     </div>
   );
 }

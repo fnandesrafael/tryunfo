@@ -19,6 +19,9 @@ export default function CardForm({ value }) {
   };
 
   const saveCard = () => {
+    const { cardName, cardImage, cardDescription,
+      cardAttr1, cardAttr2, cardAttr3, cardTrunfo, cardRare, deckCards } = cardData;
+
     const redefinedCardData = {
       cardName: '',
       cardImage: '',
@@ -29,8 +32,21 @@ export default function CardForm({ value }) {
       cardTrunfo: false,
       cardRare: 'normal',
     };
+    const newCard = {
+      cardName,
+      cardImage,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardTrunfo,
+      cardRare,
+    };
 
-    setCardData(redefinedCardData);
+    const newDeckCards = deckCards;
+    newDeckCards.push(newCard);
+
+    setCardData({ ...redefinedCardData, deckCards: newDeckCards });
   };
 
   useEffect(() => {

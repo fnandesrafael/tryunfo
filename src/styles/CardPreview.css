@@ -9,13 +9,17 @@
   width: 600px;
 }
 
-.card-preview {
+.card-preview, .card-created {
   background-color: #f0f0f0;
   border-radius: 25px;
   display: flex;
   flex-flow: column;
   margin-bottom: 450px;
   width: 450px;
+}
+
+.card-created {
+  margin-bottom: 0;
 }
 
 .card-preview-title {
