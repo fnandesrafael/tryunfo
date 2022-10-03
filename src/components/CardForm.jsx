@@ -18,6 +18,21 @@ export default function CardForm({ value }) {
     ));
   };
 
+  const saveCard = () => {
+    const redefinedCardData = {
+      cardName: '',
+      cardImage: '',
+      cardDescription: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardTrunfo: false,
+      cardRare: 'normal',
+    };
+
+    setCardData(redefinedCardData);
+  };
+
   useEffect(() => {
     const verifyCardData = () => {
       const { cardName, cardImage, cardDescription,
@@ -170,6 +185,7 @@ export default function CardForm({ value }) {
         type="button"
         disabled={ isSaveBtnDisabled }
         data-testid="save-button"
+        onClick={ saveCard }
       >
         Salvar
       </button>
