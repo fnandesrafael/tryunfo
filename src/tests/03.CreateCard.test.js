@@ -13,6 +13,10 @@ const defaultProps = {
   cardTrunfo: true,
 }
 
+const defaultPropsWithValidImage = {
+  ...defaultProps, cardImage: "https://archives.bulbagarden.net/media/upload/thumb/1/17/025Pikachu-Original.png/600px-025Pikachu-Original.png"
+}
+
 describe("3 - Crie e renderize o componente CardPreview com as props necessárias", () => {
   it("Será validado se o componente `data-testid=name-card` é exibido e possui o valor da prop `cardName`", () => {
     render(<CardPreview value={defaultProps} />);
@@ -21,12 +25,20 @@ describe("3 - Crie e renderize o componente CardPreview com as props necessária
     expect(text).toHaveTextContent("Nome da carta");
   });
 
-  it("Será validado se o componente `data-testid=image-card` é exibido e possui o atributo `src` com o valor da prop `cardImage` e o atributo alt com o valor da prop `cardName`", () => {
-    render(<CardPreview value={defaultProps} />);
+  it(`Será validado se o componente "data-testid=image-card" é exibido e possui o atributo "src" com o valor da prop "cardImage" e o atributo alt com o valor da prop "cardName"
+  quando o valor equivale à uma imagem`, () => {
+    render(<CardPreview value={defaultPropsWithValidImage} />);
     const image = screen.getByTestId(/image-card/i);
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute("src", "url-to-image");
+    expect(image).toHaveAttribute("src", "https://archives.bulbagarden.net/media/upload/thumb/1/17/025Pikachu-Original.png/600px-025Pikachu-Original.png");
     expect(image).toHaveAttribute("alt", "Nome da carta");
+  });
+
+  it("Será validado se o componente `data-testid=image-card` não é exibido, enquanto o componente `data-testid=image-card-default` é exibido quando o atributo `cardImage` não é uma imagem válida", () => {
+    render(<CardPreview value={defaultProps} />);
+    const notImageComponent = screen.getByTestId(/image-card-default/i);
+
+    expect(notImageComponent).toBeInTheDocument();
   });
 
   it("Será validado se o componente `data-testid=description-card` é exibido e possui o valor da prop `cardDescription`", () => {

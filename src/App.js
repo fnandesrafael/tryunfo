@@ -4,8 +4,8 @@ import CardPreview from './components/CardPreview';
 // import Deck from './components/Deck';
 // import DeckFilters from './components/DeckFilters';
 import Header from './components/Header';
-import './styles/App.css';
 import Card from './components/Card';
+import './styles/App.css';
 
 export default function App() {
   const [cardData, setCardData] = useState({
@@ -18,6 +18,7 @@ export default function App() {
     cardTrunfo: false,
     cardRare: 'normal',
     deckCards: [],
+    hasTrunfo: false,
   });
 
   return (

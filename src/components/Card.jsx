@@ -41,7 +41,7 @@ export default function Card({ value }) {
               alt={ cardName }
             />
           ) : (
-            <div className="card-preview-image" />
+            <div className="card-preview-image" data-testid="image-card-default" />
           )}
         </div>
         <div className="card-preview-attr-container">

@@ -46,7 +46,13 @@ export default function CardForm({ value }) {
     const newDeckCards = deckCards;
     newDeckCards.push(newCard);
 
-    setCardData({ ...redefinedCardData, deckCards: newDeckCards });
+    if (cardTrunfo) {
+      return setCardData({
+        ...redefinedCardData, hasTrunfo: true, deckCards: newDeckCards,
+      });
+    } return setCardData({
+      ...redefinedCardData, deckCards: newDeckCards,
+    });
   };
 
   useEffect(() => {
@@ -159,19 +165,27 @@ export default function CardForm({ value }) {
         <p className="card-form-input-text">
           Agora você pode definir cada um dos três atributos do seu Pokémon
         </p>
-        <div className="super-trunfo-container">
-          <h2 className="super-trunfo-title">
-            Super trunfo?
-          </h2>
-          <input
-            className="super-trunfo-checkbox"
-            type="checkbox"
-            name="cardTrunfo"
-            checked={ cardData.cardTrunfo }
-            onChange={ handleChanger }
-            data-testid="trunfo-input"
-          />
-        </div>
+        {
+          cardData.hasTrunfo ? (
+            <h1 className="super-trunfo-title">
+              Você já tem um Super Trunfo em seu baralho
+            </h1>
+          ) : (
+            <div className="super-trunfo-container">
+              <h2 className="super-trunfo-title">
+                Super trunfo?
+              </h2>
+              <input
+                className="super-trunfo-checkbox"
+                type="checkbox"
+                name="cardTrunfo"
+                checked={ cardData.cardTrunfo }
+                onChange={ handleChanger }
+                data-testid="trunfo-input"
+              />
+            </div>
+          )
+        }
         <p className="card-form-input-text">
           Decida se essa carta é o seu Super Trunfo, lembre-se de que só
           pode haver um Super Trunfo no seu baralho!
