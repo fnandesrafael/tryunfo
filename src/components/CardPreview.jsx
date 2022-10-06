@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Card.css';
+import Aos from 'aos';
 import capitalize from '../utils/capitalize';
+import 'aos/dist/aos.css';
 
 export default function CardPreview({ value }) {
   const [isImage, setIsImage] = useState(false);
@@ -10,6 +12,10 @@ export default function CardPreview({ value }) {
     cardAttr1, cardAttr2, cardAttr3, cardTrunfo, cardRare } = value;
 
   useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+
     const verifyCardImage = async () => {
       const response = /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(cardImage);
 
@@ -21,7 +27,7 @@ export default function CardPreview({ value }) {
   return (
     <div className="card-preview-section">
       <h1 className="card-preview-title">Pré-visualize sua carta</h1>
-      <div className="card-preview">
+      <div className="card-preview" data-aos="fade-up">
         <div className="card-preview-upper-container">
           <div className="card-preview-info-container">
             <h3 className="card-preview-name" data-testid="name-card">

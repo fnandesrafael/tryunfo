@@ -12,20 +12,28 @@
 .card-preview, .card-created {
   background-color: #f0f0f0;
   border-radius: 25px;
+  box-shadow: 0 10px 15px #d6d6d6;
   display: flex;
   flex-flow: column;
   margin-bottom: 450px;
+  transition: 0.5s;
   width: 450px;
+
+}
+
+.card-created {
+  margin: 75px 50px;
+}
+
+.card-preview:hover, .card-created:hover {
+  box-shadow: 0 15px 20px #b0b0b0;
+
 }
 
 .card-container {
   align-items: center;
   display: flex;
   flex-flow: column;
-}
-
-.card-created {
-  margin: 75px 50px;
 }
 
 .card-preview-title {
