@@ -18,6 +18,8 @@ export default function Deck({ value }) {
 
     const stillHasTrunfo = cardData.deckCards.find((card) => card.cardTrunfo === true);
 
+    localStorage.setItem('deck', JSON.stringify(newDeck));
+
     if (stillHasTrunfo) {
       setCardData({ ...cardData, deckCards: newDeck, filteredDeck: newDeck });
     } setCardData({

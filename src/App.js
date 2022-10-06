@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CardForm from './components/CardForm';
 import CardPreview from './components/CardPreview';
 import Deck from './components/Deck';
@@ -20,6 +20,19 @@ export default function App() {
     filteredDeck: [],
     hasTrunfo: false,
   });
+
+  useEffect(() => {
+    const recoveredDeck = localStorage.getItem('deck');
+
+    if (recoveredDeck === null) {
+      return;
+    }
+    setCardData({
+      ...cardData,
+      deckCards: JSON.parse(recoveredDeck),
+      filteredDeck: JSON.parse(recoveredDeck),
+    });
+  }, []);
 
   return (
     <div className="app">

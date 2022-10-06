@@ -32,9 +32,11 @@ export default function CardForm({ value }) {
       cardTrunfo,
       cardRare,
     };
-    const newDeckCards = deckCards;
+    const newDeck = deckCards;
 
-    newDeckCards.push(newCard);
+    newDeck.push(newCard);
+
+    localStorage.setItem('deck', JSON.stringify(newDeck));
 
     if (cardTrunfo) {
       return setCardData({
@@ -48,10 +50,11 @@ export default function CardForm({ value }) {
         cardTrunfo: false,
         cardRare: 'normal',
         hasTrunfo: true,
-        deckCards: newDeckCards,
-        filteredDeck: newDeckCards,
+        deckCards: newDeck,
+        filteredDeck: newDeck,
       });
-    } return setCardData({
+    }
+    return setCardData({
       ...cardData,
       cardName: '',
       cardImage: '',
@@ -61,8 +64,8 @@ export default function CardForm({ value }) {
       cardAttr3: '0',
       cardTrunfo: false,
       cardRare: 'normal',
-      deckCards: newDeckCards,
-      filteredDeck: newDeckCards,
+      deckCards: newDeck,
+      filteredDeck: newDeck,
     });
   };
 
