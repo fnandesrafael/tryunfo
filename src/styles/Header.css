@@ -125,7 +125,7 @@
 }
 
 .header-pokeball-2 {
-  animation: pokeball-spin-left 8s linear infinite;
+  animation: pokeball-spin-left 6s linear infinite;
   animation-timing-function: ease-in-out;
   height: 215px;
   left: 1450px;
@@ -135,7 +135,7 @@
 }
 
 .header-pokeball-3 {
-  animation: pokeball-spin-left 8s linear infinite;
+  animation: pokeball-spin-left 5s linear infinite;
   filter: blur(10px);
   left: -750px;
   position: absolute;
