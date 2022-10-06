@@ -16,6 +16,7 @@ describe("12 - Crie o filtro de Super Trunfo", () => {
     const attr3Input = screen.getByTestId(/attr3-input/i);
     const selectInput = screen.getByTestId(/rare-input/i);
     const saveBtn = screen.getByTestId("save-button");
+    const filterBtn = screen.getByTestId("filter-button");
 
     // Primeira Carta
     userEvent.type(nameInput, 'Carta 1 - Chinelo de Prego');
@@ -50,6 +51,7 @@ describe("12 - Crie o filtro de Super Trunfo", () => {
 
     const trunfoFilterBtn = screen.getByTestId("trunfo-filter");
     userEvent.click(trunfoFilterBtn);
+    userEvent.click(filterBtn);
 
     expect(screen.getByText("Carta 1 - Chinelo de Prego")).toBeInTheDocument();
     expect(screen.queryByText("Carta 2 - Havaiana de Pau")).not.toBeInTheDocument();

@@ -72,6 +72,7 @@ export default function DeckFilters({ value }) {
             type="checkbox"
             name="trunfoFilter"
             onChange={ handleChanger }
+            data-testid="trunfo-filter"
           />
         </div>
         <button
