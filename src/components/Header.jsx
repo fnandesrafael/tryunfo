@@ -17,7 +17,9 @@ export default function Header() {
           alt="Pokébola"
           className="header-pokeball-3"
         />
-        <h1 className="header-title">Pokétrunfo</h1>
+        <a href="/">
+          <h1 className="header-title">Pokétrunfo</h1>
+        </a>
         <p className="header-text">
           Crie suas cartas, monte seu baralho e divirta-se!
         </p>

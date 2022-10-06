@@ -224,15 +224,17 @@ export default function CardForm({ value }) {
           Defina o quão rara é essa nova carta
         </p>
       </form>
-      <button
-        className="save-card-btn"
-        type="button"
-        disabled={ isSaveBtnDisabled }
-        data-testid="save-button"
-        onClick={ saveCard }
-      >
-        Salvar
-      </button>
+      <a href={ `#${cardData.deckCards.length - 1}` }>
+        <button
+          className="save-card-btn"
+          type="button"
+          disabled={ isSaveBtnDisabled }
+          data-testid="save-button"
+          onClick={ saveCard }
+        >
+          Salvar
+        </button>
+      </a>
     </div>
   );
 }
