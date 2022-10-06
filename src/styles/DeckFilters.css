@@ -5,6 +5,7 @@
   display: flex;
   flex-flow: row;
   height: 500px;
+  margin-bottom: 100px;
   width: 1831px;
 }
 
@@ -100,7 +101,7 @@
   animation: pokeball-bounce-left 6s linear infinite;
   left: -50px;
   position: absolute;
-  top: 2750px;
+  top: 2700px;
   transform: rotate(-5.74deg);
   width: 400px;
 }
@@ -109,7 +110,7 @@
   animation: pokeball-bounce-right 8s linear infinite;
   left: -275px;
   position: absolute;
-  top: 3250px;
+  top: 3100px;
   transform: matrix(-0.99, -0.1, -0.1, 0.99, 0, 0);
   width: 750px;
 }
