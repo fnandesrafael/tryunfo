@@ -48,10 +48,13 @@ export default function CardForm({ value }) {
 
     if (cardTrunfo) {
       return setCardData({
-        ...redefinedCardData, hasTrunfo: true, deckCards: newDeckCards,
+        ...redefinedCardData,
+        hasTrunfo: true,
+        deckCards: newDeckCards,
+        filteredDeck: newDeckCards,
       });
     } return setCardData({
-      ...redefinedCardData, deckCards: newDeckCards,
+      ...redefinedCardData, deckCards: newDeckCards, filteredDeck: newDeckCards,
     });
   };
 

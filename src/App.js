@@ -17,6 +17,7 @@ export default function App() {
     cardTrunfo: false,
     cardRare: 'normal',
     deckCards: [],
+    filteredDeck: [],
     hasTrunfo: false,
   });
 
@@ -28,7 +29,7 @@ export default function App() {
         <CardPreview value={ cardData } />
       </section>
       <section className="card-display-section">
-        <DeckFilters />
+        <DeckFilters value={ { cardData, setCardData } } />
         <Deck value={ cardData } />
       </section>
     </div>
