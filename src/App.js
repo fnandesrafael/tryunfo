@@ -3,8 +3,8 @@ import CardForm from './components/CardForm';
 import CardPreview from './components/CardPreview';
 import Deck from './components/Deck';
 import Header from './components/Header';
-// import DeckFilters from './components/DeckFilters';
-import './styles/App.css';
+import DeckFilters from './components/DeckFilters';
+import './styles/index.css';
 
 export default function App() {
   const [cardData, setCardData] = useState({
@@ -28,7 +28,7 @@ export default function App() {
         <CardPreview value={ cardData } />
       </section>
       <section className="card-display-section">
-        {/* <DeckFilters /> */}
+        <DeckFilters />
         <Deck value={ cardData } />
       </section>
     </div>
