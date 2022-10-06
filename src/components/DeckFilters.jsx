@@ -51,6 +51,7 @@ export default function DeckFilters({ value }) {
           type="text"
           name="nameFilter"
           onChange={ handleChanger }
+          data-testid="name-filter"
         />
         <h3 className="deck-filters-input-title">Filtre por raridade:</h3>
         <select
@@ -76,6 +77,7 @@ export default function DeckFilters({ value }) {
           className="filter-btn"
           type="button"
           onClick={ filterDeck }
+          data-testid="filter-button"
         >
           Filtrar
         </button>

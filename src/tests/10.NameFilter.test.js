@@ -21,6 +21,7 @@ describe("10 - Crie o filtro pelo nome da carta", () => {
     const attr3Input = screen.getByTestId(/attr3-input/i);
     const selectInput = screen.getByTestId(/rare-input/i);
     const saveBtn = screen.getByTestId("save-button");
+    const filterBtn = screen.getByTestId("filter-button");
 
     // Primeira carta
     userEvent.type(nameInput, 'Carta 1 - Bebedouro de Guarulhos');
@@ -58,9 +59,10 @@ describe("10 - Crie o filtro pelo nome da carta", () => {
     userEvent.selectOptions(selectInput, "raro");
     userEvent.click(checkboxTrunfo);
     userEvent.click(saveBtn);
-
+    
     const filterNameInput = screen.getByTestId(/name-filter/i);
     userEvent.type(filterNameInput, "Bebedouro");
+    userEvent.click(filterBtn);
 
     expect(screen.getByText("Carta 1 - Bebedouro de Guarulhos")).toBeInTheDocument();
     expect(screen.getByText("Carta 2 - Bebedouro de Bebedouro")).toBeInTheDocument();
@@ -78,6 +80,7 @@ describe("10 - Crie o filtro pelo nome da carta", () => {
     const attr3Input = screen.getByTestId(/attr3-input/i);
     const selectInput = screen.getByTestId(/rare-input/i);
     const saveBtn = screen.getByTestId("save-button");
+    const filterBtn = screen.getByTestId("filter-button");
 
     userEvent.type(nameInput, 'Carta 1 - Bebedouro de Guarulhos');
     userEvent.type(imgInput, 'url-to-image');
@@ -91,6 +94,7 @@ describe("10 - Crie o filtro pelo nome da carta", () => {
 
     const filterNameInput = screen.getByTestId(/name-filter/i);
     userEvent.type(filterNameInput, "Escavadeira");
+    userEvent.click(filterBtn);
     
     expect(screen.queryByText("Carta 1 - Bebedouro de Guarulhos")).not.toBeInTheDocument();
   });
