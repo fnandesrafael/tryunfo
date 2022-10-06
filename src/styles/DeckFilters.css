@@ -1,0 +1,152 @@
+.deck-filters-body {
+  align-items: center;
+  background: #bdbdbd40;
+  box-shadow: 0 19px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-flow: row;
+  height: 500px;
+  width: 1831px;
+}
+
+.deck-filters-description {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 125px;
+  width: 550px;
+}
+
+.deck-filters-title {
+  border-bottom: 1px solid #b0b0b0;
+  color: black;
+  display: flex;
+  font-family: 'Nunito';
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 132px;
+  margin: 0;
+  padding: 0 50px;
+  text-align: center;
+  width: 450px;
+}
+
+.deck-filters-text {
+  align-items: center;
+  color: #1e1e1e;
+  display: flex;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  width: 450px;
+}
+
+.deck-filters-input-title {
+  align-items: center;
+  color: black;
+  font-family: 'Nunito';
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.deck-filters-name {
+  background: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 21px 19px #bdbdbd40;
+  font-family: 'Nunito';
+  font-size: 20px;
+  font-weight: 400;
+  height: 25px;
+  outline: none;
+  padding: 1rem;
+  width: 350px;
+}
+
+.deck-filters-rare {
+  background: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 21px 19px #bdbdbd40;
+  color: black;
+  font-family: 'Nunito';
+  font-size: 20px;
+  font-weight: 400;
+  height: 45px;
+  outline: none;
+  padding: 0.5rem;
+  width: 375px;
+}
+
+.deck-filters-trunfo {
+  box-shadow: 0 21px 19px #bdbdbd40;
+  height: 20px;
+  margin-left: 25px;
+  outline: none;
+  width: 20px;
+}
+
+.deck-filters-trunfo-container {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+}
+
+.deck-filters-pokeball-1 {
+  animation: pokeball-bounce-left 6s linear infinite;
+  left: -50px;
+  position: absolute;
+  top: 2750px;
+  transform: rotate(-5.74deg);
+  width: 400px;
+}
+
+.deck-filters-pokeball-2 {
+  animation: pokeball-bounce-right 8s linear infinite;
+  left: -275px;
+  position: absolute;
+  top: 3250px;
+  transform: matrix(-0.99, -0.1, -0.1, 0.99, 0, 0);
+  width: 750px;
+}
+
+.deck-filters-pikachu {
+  height: 650px;
+  margin-left: 150px;
+}
+
+@keyframes pokeball-bounce-right {
+
+  0% {
+    transform: scaleX(-1) translateY(10px);
+  }
+
+  50% {
+    transform: scaleX(-1) translateY(0);
+  }
+
+  100% {
+    transform: scaleX(-1) translateY(10px);
+  }
+
+}
+
+@keyframes pokeball-bounce-left {
+
+  0% {
+    transform: scaleX(1) translateY(0);
+  }
+
+  50% {
+    transform: scaleX(1) translateY(10px);
+  }
+
+  100% {
+    transform: scaleX(1) translateY(0);
+  }
+
+}

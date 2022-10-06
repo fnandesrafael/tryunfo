@@ -115,7 +115,7 @@
 }
 
 .header-pokeball-1 {
-  animation: pokeball-spin-right 8s linear infinite;
+  animation: pokeball-bounce-right 8s linear infinite;
   animation-timing-function: ease-in-out;
   height: 350px;
   left: 1200px;
@@ -125,7 +125,7 @@
 }
 
 .header-pokeball-2 {
-  animation: pokeball-spin-left 6s linear infinite;
+  animation: pokeball-bounce-left 6s linear infinite;
   animation-timing-function: ease-in-out;
   height: 215px;
   left: 1450px;
@@ -135,7 +135,7 @@
 }
 
 .header-pokeball-3 {
-  animation: pokeball-spin-left 5s linear infinite;
+  animation: pokeball-bounce-left 5s linear infinite;
   filter: blur(10px);
   left: -750px;
   position: absolute;
@@ -262,7 +262,7 @@
   }
 
   .header-pokeball-1 {
-    animation: pokeball-spin-right 5s linear infinite;
+    animation: pokeball-bounce-right 5s linear infinite;
     animation-timing-function: ease-in-out;
     height: 230px;
     left: 940px;
@@ -272,7 +272,7 @@
   }
 
   .header-pokeball-2 {
-    animation: pokeball-spin-left 8s linear infinite;
+    animation: pokeball-bounce-left 8s linear infinite;
     animation-timing-function: ease-in-out;
     height: 150px;
     left: 1075px;
@@ -282,7 +282,7 @@
   }
 
   .header-pokeball-3 {
-    animation: pokeball-spin-left 8s linear infinite;
+    animation: pokeball-bounce-left 8s linear infinite;
     filter: blur(10px);
     height: 755px;
     left: -500px;
@@ -292,7 +292,7 @@
   }
 }
 
-@keyframes pokeball-spin-right {
+@keyframes pokeball-bounce-right {
 
   0% {
     transform: scaleX(-1) translateY(15px);
@@ -308,7 +308,7 @@
 
 }
 
-@keyframes pokeball-spin-left {
+@keyframes pokeball-bounce-left {
 
   0% {
     transform: scaleX(1) translateY(0);
