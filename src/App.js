@@ -30,7 +30,7 @@ export default function App() {
       </section>
       <section className="card-display-section">
         <DeckFilters value={ { cardData, setCardData } } />
-        <Deck value={ cardData } />
+        <Deck value={ { cardData, setCardData } } />
       </section>
     </div>
   );

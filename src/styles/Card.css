@@ -18,6 +18,12 @@
   width: 450px;
 }
 
+.card-container {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+}
+
 .card-created {
   margin: 75px 50px;
 }
@@ -140,4 +146,26 @@
 
 .card-preview-description::-webkit-scrollbar {
   display: none;
+}
+
+.delete-btn {
+  background: #405cf5;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 21px 19px rgba(189, 189, 189, 0.25);
+  color: white;
+  font-family: 'Nunito';
+  font-size: 20px;
+  font-weight: 400;
+  height: 50px;
+  transition: 0.2s ease-in-out;
+  width: 125px;
+}
+
+.delete-btn:hover {
+  background: white;
+  border: 1px solid #405cf5;
+  color: #405cf5;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }

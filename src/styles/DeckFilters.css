@@ -65,7 +65,7 @@
   height: 25px;
   outline: none;
   padding: 1rem;
-  width: 350px;
+  width: 450px;
 }
 
 .deck-filters-rare {
@@ -140,7 +140,7 @@
 
 .deck-filters-pikachu {
   height: 650px;
-  margin-left: 150px;
+  margin-left: 50px;
 }
 
 @keyframes pokeball-bounce-right {

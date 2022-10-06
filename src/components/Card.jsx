@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import '../styles/CardPreview.css';
+import '../styles/Card.css';
 import capitalize from '../utils/capitalize';
 
 export default function Card({ value }) {

@@ -22,16 +22,6 @@ export default function CardForm({ value }) {
     const { cardName, cardImage, cardDescription,
       cardAttr1, cardAttr2, cardAttr3, cardTrunfo, cardRare, deckCards } = cardData;
 
-    const redefinedCardData = {
-      cardName: '',
-      cardImage: '',
-      cardDescription: '',
-      cardAttr1: '0',
-      cardAttr2: '0',
-      cardAttr3: '0',
-      cardTrunfo: false,
-      cardRare: 'normal',
-    };
     const newCard = {
       cardName,
       cardImage,
@@ -42,19 +32,37 @@ export default function CardForm({ value }) {
       cardTrunfo,
       cardRare,
     };
-
     const newDeckCards = deckCards;
+
     newDeckCards.push(newCard);
 
     if (cardTrunfo) {
       return setCardData({
-        ...redefinedCardData,
+        ...cardData,
+        cardName: '',
+        cardImage: '',
+        cardDescription: '',
+        cardAttr1: '0',
+        cardAttr2: '0',
+        cardAttr3: '0',
+        cardTrunfo: false,
+        cardRare: 'normal',
         hasTrunfo: true,
         deckCards: newDeckCards,
         filteredDeck: newDeckCards,
       });
     } return setCardData({
-      ...redefinedCardData, deckCards: newDeckCards, filteredDeck: newDeckCards,
+      ...cardData,
+      cardName: '',
+      cardImage: '',
+      cardDescription: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardTrunfo: false,
+      cardRare: 'normal',
+      deckCards: newDeckCards,
+      filteredDeck: newDeckCards,
     });
   };
 
