@@ -58,6 +58,7 @@ export default function DeckFilters({ value }) {
           className="deck-filters-rare"
           name="rareFilter"
           onChange={ handleChanger }
+          data-testid="rare-filter"
         >
           <option value="todas">Todas</option>
           <option value="normal">Normal</option>
