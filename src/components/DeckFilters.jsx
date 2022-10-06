@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Aos from 'aos';
 import '../styles/DeckFilters.css';
 import PropTypes from 'prop-types';
 import Pokeball from '../images/pokeball.png';
 import Pikachu from '../images/pikachu.png';
+import 'aos/dist/aos.css';
 
 export default function DeckFilters({ value }) {
   const { cardData, setCardData } = value;
@@ -33,12 +35,18 @@ export default function DeckFilters({ value }) {
     ));
   };
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <div className="deck-filters-body">
       <img className="deck-filters-pokeball-1" src={ Pokeball } alt="pokeball" />
       <img className="deck-filters-pokeball-2" src={ Pokeball } alt="pokeball" />
       <div className="deck-filters-description">
-        <h1 className="deck-filters-title">Seu Baralho</h1>
+        <h1 className="deck-filters-title" data-aos="fade-up">Seu Baralho</h1>
         <p className="deck-filters-text">
           Confira abaixo todas as suas cartas criadas.
           Utilize os filtros à direita para encontrá-las mais rapidamente!
@@ -84,7 +92,12 @@ export default function DeckFilters({ value }) {
           Filtrar
         </button>
       </div>
-      <img className="deck-filters-pikachu" src={ Pikachu } alt="pikachu" />
+      <img
+        className="deck-filters-pikachu"
+        src={ Pikachu }
+        alt="pikachu"
+        data-aos="fade-right"
+      />
     </div>
   );
 }

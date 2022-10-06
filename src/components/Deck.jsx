@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
 import PropTypes from 'prop-types';
 import Card from './Card';
+import 'aos/dist/aos.css';
 
 export default function Deck({ value }) {
   const { cardData, setCardData } = value;
@@ -30,10 +32,16 @@ export default function Deck({ value }) {
     });
   };
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
       {cardData.filteredDeck.map((card, index) => (
-        <div className="card-container" id={ index } key={ index }>
+        <div className="card-container" id={ index } key={ index } data-aos="fade-up">
           <Card value={ card } />
           <button
             className="delete-btn"

@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
 import '../styles/Header.css';
 import Eevee from '../images/eevee.png';
 import Pokeball from '../images/pokeball.png';
+import 'aos/dist/aos.css';
 
 export default function Header() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <header className="header-body">
       <div>
@@ -11,6 +19,7 @@ export default function Header() {
           src={ Eevee }
           alt="Eevee"
           className="header-eevee"
+          data-aos="fade-left"
         />
         <img
           src={ Pokeball }
@@ -18,13 +27,21 @@ export default function Header() {
           className="header-pokeball-3"
         />
         <a href="/">
-          <h1 className="header-title">Pokétrunfo</h1>
+          <h1 className="header-title" data-aos="fade-right">Pokétrunfo</h1>
         </a>
-        <p className="header-text">
+        <p className="header-text" data-aos="fade-up">
           Crie suas cartas, monte seu baralho e divirta-se!
         </p>
-        <img className="header-pokeball-1" src={ Pokeball } alt="Pokébola" />
-        <img className="header-pokeball-2" src={ Pokeball } alt="Pokébola" />
+        <img
+          className="header-pokeball-1"
+          src={ Pokeball }
+          alt="Pokébola"
+        />
+        <img
+          className="header-pokeball-2"
+          src={ Pokeball }
+          alt="Pokébola"
+        />
       </div>
       <div className="pokeball-line-header">
         <a
@@ -32,6 +49,8 @@ export default function Header() {
           href="https://github.com/rafaelimaf"
           target="_blank"
           rel="noreferrer"
+          data-aos-delay="300"
+          data-aos="fade-up"
         >
           Github
         </a>
@@ -40,6 +59,8 @@ export default function Header() {
           href="https://linkedin.com/in/rafaelimaf"
           target="_blank"
           rel="noreferrer"
+          data-aos-delay="500"
+          data-aos="fade-up"
         >
           Linkedin
         </a>
