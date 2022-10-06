@@ -27,7 +27,7 @@ export default function App() {
         <CardForm value={ { cardData, setCardData } } />
         <CardPreview value={ cardData } />
       </section>
-      <section>
+      <section className="card-display-section">
         {/* <DeckFilters /> */}
         <Deck value={ cardData } />
       </section>

@@ -4,14 +4,13 @@ import Card from './Card';
 
 export default function Deck({ value }) {
   const { deckCards } = value;
-  console.log(deckCards);
 
   return (
-    <section>
+    <>
       {deckCards.map((card, index) => (
         <Card key={ index } value={ card } />
       ))}
-    </section>
+    </>
   );
 }
 
