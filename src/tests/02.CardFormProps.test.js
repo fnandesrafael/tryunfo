@@ -12,6 +12,7 @@ const cardData = {
   cardImage: "url-to-image",
   cardRare: "raro",
   cardTrunfo: true,
+  deckCards: []
 }
 
 describe("2 - Adicione as props necessárias ao componente de formulário", () => {

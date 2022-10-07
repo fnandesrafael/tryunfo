@@ -224,7 +224,7 @@ export default function CardForm({ value }) {
           Defina o quão rara é essa nova carta
         </p>
       </form>
-      <a href={ `#${() => cardData.deckCards.length - 1}` }>
+      <a href={ `#${cardData.deckCards.length - 1}` }>
         <button
           className="save-card-btn"
           type="button"
