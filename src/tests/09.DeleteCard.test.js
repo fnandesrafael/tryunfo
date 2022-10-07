@@ -3,8 +3,10 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 import App from '../App';
 
-describe("9 - Crie um botão para remover uma carta do baralho", () => {
+describe("9 - Crie um botão para remover uma carta do baralho", () => {  
   it("Será validado se o botão `Excluir` é renderizado na tela apenas nas cartas adicionadas ao baralho", () => {
+    localStorage.clear()
+
     render(<App />);
     const checkboxTrunfo = screen.getByTestId(/trunfo-input/i);
     const nameInput = screen.getByTestId(/name-input/i);
@@ -31,6 +33,8 @@ describe("9 - Crie um botão para remover uma carta do baralho", () => {
   });
 
   it("Será validado se ao adicionar uma carta e excluí-la em seguida, a carta não é renderizada", () => {
+    localStorage.clear()
+
     render(<App />);
     const checkboxTrunfo = screen.getByTestId(/trunfo-input/i);
     const nameInput = screen.getByTestId(/name-input/i);
@@ -62,6 +66,8 @@ describe("9 - Crie um botão para remover uma carta do baralho", () => {
   });
 
   it("Será validado se ao adicionar duas cartas e excluir uma em seguida, a carta não é renderizada", () => {
+    localStorage.clear()
+
     render(<App />);
 
     const checkboxTrunfo = screen.getByTestId(/trunfo-input/i);
@@ -103,6 +109,8 @@ describe("9 - Crie um botão para remover uma carta do baralho", () => {
   });
 
   it("Será validado se ao excluir uma carta Super Trunfo, o checkbox no formulário é renderizado novamente", () => {
+    localStorage.clear()
+
     render(<App />);
 
     let checkboxTrunfo = screen.getByTestId(/trunfo-input/i);
