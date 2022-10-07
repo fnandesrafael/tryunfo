@@ -185,6 +185,10 @@
     width: 400px;
   }
 
+  .card-created {
+    margin-bottom: 75px;
+  }
+
   .card-preview-upper-container {
     height: 325px;
     width: 375px;
