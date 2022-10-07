@@ -20,12 +20,12 @@ A aplicação é composta por um **Componente Controlado** que funciona como um 
 
 ## Instruções para Execução:
 
-##### ⚠️ Requisitos Mínimos
+#### ⚠️ Requisitos Mínimos
 Para que o projeto possa ser executado localmente, é necessário que você possua instalado em seu sistema, o [Docker](https://www.docker.com/).
 
 O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containers e imagens, quais serão utilizados nesse projeto para subir a aplicação em ambiente `Node` na versão `14-alpine`.
 
-##### 🐋 Subindo o Container da Aplicação
+#### 🐋 Subindo o Container da Aplicação
 Após realizar o clone do repositório, e já com o `Docker` devidamente instalado. Na raíz do projeto, rode o seguinte comando no terminal:
 
 ```cli
@@ -40,7 +40,7 @@ docker run --name react-app-dockerized -v $(pwd):/app -p 3000:3000 -d react-app-
 ```
 > O comando acima irá construir o container "react-app-dockerized", através da imagem de mesmo nome. Com as flags "-v" o container estará mapeando o volume passado, o que significa que qualquer alteração nos arquivos também serão captadas no container. Com a flag "-p" é feito o bind da porta do container(3000) com a sua porta local 3000. E por fim, com a flag "-d" o container será executado desanexado do terminal.
 
-##### 🧪 Execução de Testes
+#### 🧪 Execução de Testes
 
 Todos os `Testes`, assim como as configurações de `ESlint` e `Stylelint` fazem parte do fluxo de CI do projeto. Caso queira realizar os testes da aplicação, basta que você se anexe ao terminal do container com o comando:
 
