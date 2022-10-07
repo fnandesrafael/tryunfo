@@ -215,4 +215,9 @@
   .attr-input {
     width: 85px;
   }
+
+  .save-card-btn {
+    left: 975px;
+    top: 1900px;
+  }
 }

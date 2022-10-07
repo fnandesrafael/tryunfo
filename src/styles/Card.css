@@ -92,9 +92,7 @@
 
 .card-preview-attr-container {
   flex-flow: column;
-  left: 1425px;
   text-align: center;
-  top: 1455px;
 }
 
 .card-preview-attr-name, .card-preview-attr-value {
@@ -174,4 +172,48 @@
   color: #405cf5;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+}
+
+@media screen and ( max-width : 1366px ) and ( max-height : 768px ) {
+
+  .card-preview-title {
+    font-size: 35px;
+  }
+
+  .card-preview, .card-created {
+    margin-bottom: 475px;
+    width: 400px;
+  }
+
+  .card-preview-upper-container {
+    height: 325px;
+    width: 375px;
+  }
+
+  .card-preview-name, .card-preview-trunfo {
+    font-size: 30px;
+  }
+
+  .card-preview-image {
+    width: 225px;
+  }
+
+  .card-preview-attr-name {
+    font-size: 20px;
+  }
+
+  .card-preview-attr-value {
+    font-size: 30px;
+    width: 100px;
+  }
+
+  .card-preview-rare {
+    font-size: 30px;
+    margin-top: 60px;
+    width: 300px;
+  }
+
+  .card-preview-description {
+    width: 300px;
+  }
 }
