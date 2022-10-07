@@ -18,17 +18,17 @@ jobs:
       - name: Executando ESlint
         run: npx eslint .
     
-    stylelint:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Verificando repositório do Git
-          uses: actions/checkout@v2
-        
-        - name: Instalando node
-          uses: actions/setup-node@v1
-        
-        - name: Instalando dependências
-          run: npm install
-        
-        - name: Executando Stylelint
-          run: npm run lint:styles
+  stylelint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificando repositório do Git
+        uses: actions/checkout@v2
+      
+      - name: Instalando node
+        uses: actions/setup-node@v1
+      
+      - name: Instalando dependências
+        run: npm install
+      
+      - name: Executando Stylelint
+        run: npm run lint:styles
