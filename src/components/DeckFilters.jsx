@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Aos from 'aos';
 import '../styles/DeckFilters.css';
 import PropTypes from 'prop-types';
-import Pokeball from '../images/pokeball.png';
-import Pikachu from '../images/pikachu.png';
+import Pokeball from '../assets/images/pokeball.png';
+import Pikachu from '../assets/images/pikachu.png';
 import 'aos/dist/aos.css';
 
 export default function DeckFilters({ value }) {

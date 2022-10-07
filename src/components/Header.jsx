@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import Aos from 'aos';
 import '../styles/Header.css';
-import Eevee from '../images/eevee.png';
-import Pokeball from '../images/pokeball.png';
+import Eevee from '../assets/images/eevee.png';
+import Pokeball from '../assets/images/pokeball.png';
 import 'aos/dist/aos.css';
 
 export default function Header() {

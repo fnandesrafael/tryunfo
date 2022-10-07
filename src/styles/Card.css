@@ -18,16 +18,14 @@
   margin-bottom: 450px;
   transition: 0.5s;
   width: 450px;
-
 }
 
 .card-created {
   margin: 75px 50px;
 }
 
-.card-preview:hover, .card-created:hover {
+.card-created:hover {
   box-shadow: 0 15px 20px #b0b0b0;
-
 }
 
 .card-container {
