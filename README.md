@@ -28,7 +28,7 @@ O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containe
 <details>
   <summary>
     <b>🐋 Subindo o Container da Aplicação</b>
-  <summary>
+  </summary>
 
   Após realizar o clone do repositório, e já com o `Docker` devidamente instalado. Na raíz do projeto, rode o seguinte comando no terminal:
 
@@ -46,7 +46,7 @@ O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containe
 
   Agora basta ir até o seu endereço `localhost:3000/` e a aplicação estará rodando em ambiente de desenvolvimento!
 </details>
-
+###
 <details>
   <summary>
     <b>🧪 Execução de Testes e CI</b>
