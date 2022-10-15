@@ -25,35 +25,46 @@ Para que o projeto possa ser executado localmente, é necessário que você poss
 
 O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containers e imagens, quais serão utilizados nesse projeto para subir a aplicação em ambiente `Node` na versão `14-alpine`.
 
-#### 🐋 Subindo o Container da Aplicação
-Após realizar o clone do repositório, e já com o `Docker` devidamente instalado. Na raíz do projeto, rode o seguinte comando no terminal:
+<details>
+  <summary>
+    <b>🐋 Subindo o Container da Aplicação</b>
+  <summary>
 
-```cli
-docker build -t react-app-dockerized .
-```
-> Esse comando deverá montar a imagem "react-app-dockerized" que se encontra no "Dockerfile" da raíz do projeto.
+  Após realizar o clone do repositório, e já com o `Docker` devidamente instalado. Na raíz do projeto, rode o seguinte comando no terminal:
 
-Se tudo ocorrer bem, com o comando: `docker images` será possível visualizar a imagem montada: `react-app-dockerized`. Agora, já é possível subir o container com o nosso ambiente de desenvolvimento. Para isso, rode o comando abaixo:
+  ```cli
+  docker build -t react-app-dockerized .
+  ```
+  > Esse comando deverá montar a imagem "react-app-dockerized" que se encontra no "Dockerfile" da raíz do projeto.
 
-```cli
-docker run --name react-app-dockerized -v $(pwd):/app -p 3000:3000 -d react-app-dockerized
-```
-> O comando acima irá construir o container "react-app-dockerized", através da imagem de mesmo nome. Com as flags "-v" o container estará mapeando o volume passado, o que significa que qualquer alteração nos arquivos também serão captadas no container. Com a flag "-p" é feito o bind da porta do container(3000) com a sua porta local 3000. E por fim, com a flag "-d" o container será executado desanexado do terminal.
+  Se tudo ocorrer bem, com o comando: `docker images` será possível visualizar a imagem montada: `react-app-dockerized`. Agora, já é possível subir o container com o nosso ambiente de desenvolvimento. Para isso, rode o comando abaixo:
 
-#### 🧪 Execução de Testes
+  ```cli
+  docker run --name react-app-dockerized -v $(pwd):/app -p 3000:3000 -d react-app-dockerized
+  ```
+  > O comando acima irá construir o container "react-app-dockerized", através da imagem de mesmo nome. Com as flags "-v" o container estará mapeando o volume passado, o que significa que qualquer alteração nos arquivos também serão captadas no container. Com a flag "-p" é feito o bind da porta do container(3000) com a sua porta local 3000. E por fim, com a flag "-d" o container será executado desanexado do terminal.
 
-Todos os `Testes`, assim como as configurações de `ESlint` e `Stylelint` fazem parte do fluxo de CI do projeto. Caso queira realizar os testes da aplicação, basta que você se anexe ao terminal do container com o comando:
+  Agora basta ir até o seu endereço `localhost:3000/` e a aplicação estará rodando em ambiente de desenvolvimento!
+</details>
 
-```cli
-docker exec -it react-app-dockerized sh
-```
+<details>
+  <summary>
+    <b>🧪 Execução de Testes e CI</b>
+  </summary>
 
-E agora no terminal anexado, rode o comando:
+  Todos os `Testes`, assim como as configurações de `ESlint` e `Stylelint` fazem parte do fluxo de CI do projeto. Caso queira realizar os testes da aplicação, basta que você se anexe ao terminal do container com o comando:
 
-```cli
-npm test
-```
->Esse comando rodará todos os testes do projeto. Caso prefira, rode o comando `npm run test *01*`, ou o número de qualquer outro teste, para rodá-lo em específico.
+  ```cli
+  docker exec -it react-app-dockerized sh
+  ```
+
+  E agora no terminal anexado, rode o comando:
+
+  ```cli
+  npm run test:dev
+  ```
+  >Esse comando rodará todos os testes do projeto. Caso prefira, rode o comando `npm run test:dev *01*`, ou o número de qualquer outro teste, para rodá-lo em específico.
+</details>
 
 ## Propriedade intelectual e referências:
 Toda a aplicação foi desenvolvida por mim de forma independente, sendo necessário isto, para a aprovação do projeto. Toda a criação e implementação de Componentes, Estilos e Lógica para o cumprimento dos requisitos do projeto, por mim foram feitas.
