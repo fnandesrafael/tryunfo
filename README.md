@@ -46,7 +46,7 @@ O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containe
 
   Agora basta ir até o seu endereço `localhost:3000/` e a aplicação estará rodando em ambiente de desenvolvimento!
 </details>
-###
+
 <details>
   <summary>
     <b>🧪 Execução de Testes e CI</b>
