@@ -26,7 +26,7 @@ export default function Header() {
           alt="Pokébola"
           className="header-pokeball-3"
         />
-        <a href="/">
+        <a href="/tryunfo">
           <h1 className="header-title" data-aos="fade-right">Pokétrunfo</h1>
         </a>
         <p className="header-text" data-aos="fade-up">
