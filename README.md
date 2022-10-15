@@ -18,10 +18,10 @@ A aplicação é composta por um **Componente Controlado** que funciona como um 
 
 ## Instruções para Execução:
 
-#### Execute a aplicação em ambiente de produção [aqui](https://rafaelimaf.github.io/tryunfo/)!
+### Execute a aplicação em ambiente de produção [aqui](https://rafaelimaf.github.io/tryunfo/)!
 Ou caso queira executar o projeto localmente, em ambiente de desenvolvimento, siga os passos abaixo:
 
-#### ⚠️ Requisitos Mínimos
+### ⚠️ Requisitos Mínimos
 Para que o projeto possa ser executado localmente, é necessário que você possua instalado em seu sistema, o [Docker](https://www.docker.com/).
 
 O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containers e imagens, quais serão utilizados nesse projeto para subir a aplicação em ambiente `Node` na versão `14-alpine`.
