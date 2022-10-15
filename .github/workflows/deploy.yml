@@ -18,6 +18,7 @@ jobs:
       - name: Build da aplicação
         run: |
           npm ci
+          npm run test:dev
           npm run build
 
       - name: Deploy para Github Pages
