@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/project-tryunfo/static/css/main.bb2acaa6.chunk.css",
-    "main.js": "/project-tryunfo/static/js/main.f94be873.chunk.js",
-    "main.js.map": "/project-tryunfo/static/js/main.f94be873.chunk.js.map",
-    "runtime-main.js": "/project-tryunfo/static/js/runtime-main.b30aac43.js",
-    "runtime-main.js.map": "/project-tryunfo/static/js/runtime-main.b30aac43.js.map",
-    "static/css/2.ec02d681.chunk.css": "/project-tryunfo/static/css/2.ec02d681.chunk.css",
-    "static/js/2.03bf6fcf.chunk.js": "/project-tryunfo/static/js/2.03bf6fcf.chunk.js",
-    "static/js/2.03bf6fcf.chunk.js.map": "/project-tryunfo/static/js/2.03bf6fcf.chunk.js.map",
-    "index.html": "/project-tryunfo/index.html",
-    "static/css/2.ec02d681.chunk.css.map": "/project-tryunfo/static/css/2.ec02d681.chunk.css.map",
-    "static/css/main.bb2acaa6.chunk.css.map": "/project-tryunfo/static/css/main.bb2acaa6.chunk.css.map",
-    "static/js/2.03bf6fcf.chunk.js.LICENSE.txt": "/project-tryunfo/static/js/2.03bf6fcf.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.fdc7fa72.chunk.css",
+    "main.js": "/static/js/main.d8b1cdda.chunk.js",
+    "main.js.map": "/static/js/main.d8b1cdda.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c3a15226.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c3a15226.js.map",
+    "static/css/2.ec02d681.chunk.css": "/static/css/2.ec02d681.chunk.css",
+    "static/js/2.f9664930.chunk.js": "/static/js/2.f9664930.chunk.js",
+    "static/js/2.f9664930.chunk.js.map": "/static/js/2.f9664930.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.ec02d681.chunk.css.map": "/static/css/2.ec02d681.chunk.css.map",
+    "static/css/main.fdc7fa72.chunk.css.map": "/static/css/main.fdc7fa72.chunk.css.map",
+    "static/js/2.f9664930.chunk.js.LICENSE.txt": "/static/js/2.f9664930.chunk.js.LICENSE.txt",
+    "static/media/eevee.09964170.png": "/static/media/eevee.09964170.png",
+    "static/media/pikachu.57a1a94d.png": "/static/media/pikachu.57a1a94d.png",
+    "static/media/pokeball.043527a9.png": "/static/media/pokeball.043527a9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b30aac43.js",
+    "static/js/runtime-main.c3a15226.js",
     "static/css/2.ec02d681.chunk.css",
-    "static/js/2.03bf6fcf.chunk.js",
-    "static/css/main.bb2acaa6.chunk.css",
-    "static/js/main.f94be873.chunk.js"
+    "static/js/2.f9664930.chunk.js",
+    "static/css/main.fdc7fa72.chunk.css",
+    "static/js/main.d8b1cdda.chunk.js"
   ]
 }
