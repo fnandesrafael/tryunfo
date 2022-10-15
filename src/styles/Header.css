@@ -1,0 +1,252 @@
+.header-body {
+  background: #de4141;
+  display: flex;
+  height: 750px;
+  width: 100%;
+}
+
+.header-title {
+  border-bottom: 1px solid black;
+  color: white;
+  font-family: 'Nunito' , sans-serif;
+  font-size: 145px;
+  font-style: normal;
+  font-weight: 800;
+  height: 220px;
+  left: 730px;
+  position: absolute;
+  text-align: center;
+  top: 200px;
+  width: 825px;
+}
+
+.header-text {
+  color: white;
+  font-family: 'Fredoka' , sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  height: 175px;
+  left: 880px;
+  line-height: 43px;
+  position: absolute;
+  text-align: center;
+  top: 525px;
+  width: 500px;
+}
+
+.pokeball-line-header {
+  background: #393939;
+  box-shadow: 0 19px 25px #00000040;
+  height: 110px;
+  position: absolute;
+  top: 750px;
+  width: 100%;
+  z-index: 2;
+}
+
+.gh-link {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: 600;
+  left: 700px;
+  position: absolute;
+  text-decoration: none;
+  top: 45px;
+  transition: 0.2s;
+}
+
+.gh-link:hover {
+  color: #de4141;
+  transition: 0.2s;
+}
+
+.in-link {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: 600;
+  left: 600px;
+  position: absolute;
+  text-decoration: none;
+  top: 45px;
+  transition: 0.2s;
+}
+
+.in-link:hover {
+  color: #de4141;
+  transition: 0.2s;
+}
+
+.pokeball-btn {
+  background: white;
+  border: 2rem solid #393939;
+  border-radius: 100px;
+  bottom: -50px;
+  box-shadow: 0 19px 25px #00000040;
+  height: 200px;
+  left: 800px;
+  position: absolute;
+  transition: 0.3s;
+  width: 200px;
+}
+
+.pokeball-btn:hover {
+  background: #de4141;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pokeball-btn-text {
+  color: black;
+  font-family: 'Nunito';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+}
+
+.header-eevee {
+  height: 900px;
+  left: -175px;
+  position: absolute;
+  top: -95px;
+  width: 900px;
+  z-index: 1;
+}
+
+.header-pokeball-1 {
+  animation: pokeball-bounce-right 8s linear infinite;
+  animation-timing-function: ease-in-out;
+  height: 350px;
+  left: 1200px;
+  position: absolute;
+  top: 15px;
+  transform: rotate(10deg) scaleX(-1);
+}
+
+.header-pokeball-2 {
+  animation: pokeball-bounce-left 6s linear infinite;
+  animation-timing-function: ease-in-out;
+  height: 215px;
+  left: 1450px;
+  position: absolute;
+  top: 525px;
+  transform: rotate(-5deg);
+}
+
+.header-pokeball-3 {
+  animation: pokeball-bounce-left 5s linear infinite;
+  filter: blur(10px);
+  left: -750px;
+  position: absolute;
+  top: -350px;
+  z-index: 0;
+}
+
+@media screen and ( max-width : 1366px ) and ( max-height : 768px ) {
+
+  .header-body {
+    height: 495px;
+  }
+
+  .header-title {
+    font-size: 105px;
+    height: 150px;
+    left: 575px;
+    top: 115px;
+    width: 550px;
+  }
+
+  .header-text {
+    font-size: 20px;
+    height: 175px;
+    left: 655px;
+    top: 335px;
+    width: 400px;
+  }
+
+  .pokeball-line-header {
+    height: 95px;
+    left: 0;
+    top: 495px;
+    width: 100%;
+  }
+
+  .gh-link {
+    left: 500px;
+    top: 35px;
+  }
+
+  .in-link {
+    left: 400px;
+    top: 35px;
+  }
+
+  .pokeball-btn {
+    bottom: -50px;
+    height: 175px;
+    left: 600px;
+    width: 175px;
+  }
+
+  .pokeball-btn-text {
+    font-size: 30px;
+  }
+
+  .header-eevee {
+    height: 650px;
+    left: -125px;
+    top: -115px;
+    width: 650px;
+  }
+
+  .header-pokeball-1 {
+    height: 230px;
+    left: 940px;
+    top: 5px;
+  }
+
+  .header-pokeball-2 {
+    height: 150px;
+    left: 1075px;
+    top: 335px;
+  }
+
+  .header-pokeball-3 {
+    height: 755px;
+    left: -500px;
+    top: -275px;
+  }
+}
+
+@keyframes pokeball-bounce-right {
+
+  0% {
+    transform: scaleX(-1) translateY(15px);
+  }
+
+  50% {
+    transform: scaleX(-1) translateY(0);
+  }
+
+  100% {
+    transform: scaleX(-1) translateY(15px);
+  }
+
+}
+
+@keyframes pokeball-bounce-left {
+
+  0% {
+    transform: scaleX(1) translateY(0);
+  }
+
+  50% {
+    transform: scaleX(1) translateY(15px);
+  }
+
+  100% {
+    transform: scaleX(1) translateY(0);
+  }
+
+}

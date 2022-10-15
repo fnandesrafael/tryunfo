@@ -1,47 +1,81 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import Aos from 'aos';
+import '../styles/Header.css';
+import Eevee from '../assets/images/eevee.png';
+import Pokeball from '../assets/images/pokeball.png';
 import 'aos/dist/aos.css';
 
-export default class Header extends Component {
-  componentDidMount() {
-    Aos.init({ duration: 1500 });
-  }
+export default function Header() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
 
-  render() {
-    return (
-      <header>
-        <nav
-          className="navbar navbar-expand-lg navbar-light bg-light container-fluid
-        align-items-center fixed-top shadow"
-          data-aos-mirror="true"
+  return (
+    <header className="header-body">
+      <div>
+        <img
+          src={ Eevee }
+          alt="Eevee"
+          className="header-eevee"
+          data-aos="fade-left"
+        />
+        <img
+          src={ Pokeball }
+          alt="Pokébola"
+          className="header-pokeball-3"
+        />
+        <a href="/">
+          <h1 className="header-title" data-aos="fade-right">Pokétrunfo</h1>
+        </a>
+        <p className="header-text" data-aos="fade-up">
+          Crie suas cartas, monte seu baralho e divirta-se!
+        </p>
+        <img
+          className="header-pokeball-1"
+          src={ Pokeball }
+          alt="Pokébola"
+        />
+        <img
+          className="header-pokeball-2"
+          src={ Pokeball }
+          alt="Pokébola"
+        />
+      </div>
+      <div className="pokeball-line-header">
+        <a
+          className="gh-link"
+          href="https://github.com/rafaelimaf"
+          target="_blank"
+          rel="noreferrer"
+          data-aos-delay="300"
+          data-aos="fade-up"
         >
-          <a className="navbar-brand p-2 mx-0" href="https://rafaelimaf.github.io/project-tryunfo/">
-            <h2 className="h2" data-aos="fade-down" data-aos-duration="1000">
-              Tryunfo
-            </h2>
-          </a>
-          <p
-            className="text-muted my-1"
-            data-aos="fade-down"
+          Github
+        </a>
+        <a
+          className="in-link"
+          href="https://linkedin.com/in/rafaelimaf"
+          target="_blank"
+          rel="noreferrer"
+          data-aos-delay="500"
+          data-aos="fade-up"
+        >
+          Linkedin
+        </a>
+        <a href="#card-creation">
+          <button
+            type="button"
+            aria-label="button"
+            className="pokeball-btn"
           >
-            by Rafael de Lima
-
-          </p>
-          <ul className="ms-auto navbar-nav">
-            <li className="nav-item">
-              <a
-                href="https://github.com/rafaelimaf"
-                target="_blank"
-                rel="noreferrer"
-                className="nav-link text-primary"
-                data-aos="fade-down"
-              >
-                Github
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    );
-  }
+            <h3 className="pokeball-btn-text">
+              Go!
+            </h3>
+          </button>
+        </a>
+      </div>
+    </header>
+  );
 }

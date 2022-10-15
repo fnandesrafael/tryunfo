@@ -1,51 +1,223 @@
-.card-body {
-  background: #ced4d8;
-  border: 1rem solid #fbfbfb;
-  border-radius: 0.5rem;
-  width: 21.8rem;
+.card-preview-section {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  height: 1500px;
+  justify-content: space-between;
+  left: 975px;
+  top: 1200px;
+  width: 600px;
 }
 
-.card-name {
-  background: linear-gradient(268.41deg, #0084ff 0%, #b673eb 100%);
-  border-radius: 0.5rem 0.5rem 0 0;
-  height: 3rem;
-  padding: 0.5rem 3rem;
+.card-preview, .card-created {
+  background-color: #f0f0f0;
+  border-radius: 25px;
+  box-shadow: 0 10px 15px #d6d6d6;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 450px;
+  transition: 0.5s;
+  width: 450px;
 }
 
-.card-trunfo {
-  background: linear-gradient(268.41deg, #0084ff 0%, #b673eb 100%);
-  padding: 0.5rem 3rem;
+.card-created {
+  margin: 75px 50px;
 }
 
-.card-image {
-  border: 1px #ced4d8;
-  height: 11rem;
-  margin-left: 3.5rem;
-  width: 11rem;
+.card-created:hover {
+  box-shadow: 0 15px 20px #b0b0b0;
 }
 
-.card-rare {
-  background: linear-gradient(268.41deg, #0084ff 0%, #eb73e1 100%);
-  margin-top: 0.5rem;
-  padding: 0.5rem 3rem;
+.card-container {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
 }
 
-.card-description {
-  height: 6rem;
+.card-preview-title {
+  bottom: 1400px;
+  color: black;
+  font-family: 'Nunito';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  height: 89px;
+  left: 225px;
+  line-height: 89px;
+  margin: 0;
+  padding: 75px 0 0;
+  text-align: center;
+  width: 450px;
+
+}
+
+.card-preview-upper-container {
+  background-color: #de4141;
+  border-radius: 25px;
+  display: flex;
+  height: 340px;
+  padding: 15px;
+  width: 420px;
+}
+
+.card-preview-info-container {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column;
+  height: 50px;
+  margin: 15px 5px;
+}
+
+.card-preview-name {
+  color: white;
+  font-family: 'Nunito';
+  font-size: 35px;
+  font-weight: 600;
+  height: 45px;
+  margin: 0;
+  margin-right: 5px;
+}
+
+.card-preview-trunfo {
+  font-size: 35px;
+  height: 45px;
+  margin: 0;
+}
+
+.card-preview-image {
+  height: 250px;
+  object-fit: cover;
+  width: 250px;
+}
+
+.card-preview-attr-container {
+  flex-flow: column;
+  text-align: center;
+}
+
+.card-preview-attr-name, .card-preview-attr-value {
+  font-family: 'Nunito';
+  font-size: 25px;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+.card-preview-attr-value {
+  background-color: white;
+  border-radius: 45px;
+  box-shadow: 0 21px 19px #00000040;
+  font-size: 35px;
+  height: 45px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  width: 115px;
+}
+
+.card-preview-lower-container {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+.card-preview-rare {
+  border: 5px solid #de4141;
+  border-radius: 45px;
+  font-family: 'Nunito';
+  font-size: 35px;
+  font-weight: 800;
+  margin-top: 75px;
+  padding: 5px 15px;
+  text-align: center;
+  width: 350px;
+}
+
+.card-preview-description {
+  background: white;
+  border: 15px solid white;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 21px 19px #bdbdbd40;
+  color: black;
+  font-family: 'Nunito';
+  font-size: 15px;
+  height: 100px;
+  margin-top: 0;
   overflow-y: scroll;
+  text-align: center;
+  width: 350px;
 }
 
-.card-description::-webkit-scrollbar, .card-description::-webkit-scrollbar-thumb {
-  border: 1px solid #b673eb;
-  width: 0.5rem;
+.card-preview-description::-webkit-scrollbar {
+  display: none;
 }
 
-.card-description::-webkit-scrollbar-thumb {
-  background-color: #b673eb;
+.delete-btn {
+  background: #405cf5;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 21px 19px rgba(189, 189, 189, 0.25);
+  color: white;
+  font-family: 'Nunito';
+  font-size: 20px;
+  font-weight: 400;
+  height: 50px;
+  transition: 0.2s ease-in-out;
+  width: 125px;
 }
 
-.card-attr {
-  background: linear-gradient(210deg, #0084ff 0%, #eb73e1 100%);
-  border-radius: 0 0 1rem 1rem;
-  padding: 0.5rem 2rem;
+.delete-btn:hover {
+  background: white;
+  border: 1px solid #405cf5;
+  color: #405cf5;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+@media screen and ( max-width : 1366px ) and ( max-height : 768px ) {
+
+  .card-preview-title {
+    font-size: 35px;
+  }
+
+  .card-preview, .card-created {
+    margin-bottom: 475px;
+    width: 400px;
+  }
+
+  .card-created {
+    margin-bottom: 75px;
+  }
+
+  .card-preview-upper-container {
+    height: 325px;
+    width: 375px;
+  }
+
+  .card-preview-name, .card-preview-trunfo {
+    font-size: 30px;
+  }
+
+  .card-preview-image {
+    width: 225px;
+  }
+
+  .card-preview-attr-name {
+    font-size: 20px;
+  }
+
+  .card-preview-attr-value {
+    font-size: 30px;
+    width: 100px;
+  }
+
+  .card-preview-rare {
+    font-size: 30px;
+    margin-top: 60px;
+    width: 300px;
+  }
+
+  .card-preview-description {
+    width: 300px;
+  }
 }

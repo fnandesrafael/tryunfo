@@ -1,74 +1,112 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import Aos from 'aos';
+import '../styles/DeckFilters.css';
+import PropTypes from 'prop-types';
+import Pokeball from '../assets/images/pokeball.png';
+import Pikachu from '../assets/images/pikachu.png';
 import 'aos/dist/aos.css';
 
-export default class DeckFilters extends Component {
-  componentDidMount() {
-    Aos.init({ duration: 1000 });
-  }
+export default function DeckFilters({ value }) {
+  const { cardData, setCardData } = value;
 
-  render() {
-    const { onInputChange } = this.props;
-    return (
-      <div
-        className="container-fluid d-flex flex-column bg-dark text-light mb-5
-      shadow"
-        data-aos="fade-right"
-      >
-        <h2
-          className="fs-2 text-center py-4 mb-0 border-bottom text-light
-        bg-dark"
+  const [filterParams, setFilterParams] = useState({
+    nameFilter: '',
+    rareFilter: 'todas',
+    trunfoFilter: false,
+  });
+
+  const filterDeck = () => {
+    const { nameFilter, rareFilter, trunfoFilter } = filterParams;
+
+    const newFilteredDeck = cardData.deckCards.filter((card) => (
+      card.cardName.toLowerCase().includes(nameFilter.toLowerCase())
+      && (card.cardRare === rareFilter || rareFilter === 'todas')
+      && (card.cardTrunfo === trunfoFilter || !trunfoFilter)
+    ));
+
+    return setCardData({ ...cardData, filteredDeck: newFilteredDeck });
+  };
+
+  const handleChanger = ({ target }) => {
+    const inputValue = target.type === 'checkbox' ? target.checked : target.value;
+
+    setFilterParams((prevState) => (
+      { ...prevState, [target.name]: inputValue }
+    ));
+  };
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
+
+  return (
+    <div className="deck-filters-body">
+      <img className="deck-filters-pokeball-1" src={ Pokeball } alt="pokeball" />
+      <img className="deck-filters-pokeball-2" src={ Pokeball } alt="pokeball" />
+      <div className="deck-filters-description">
+        <h1 className="deck-filters-title" data-aos="fade-up">Seu Baralho</h1>
+        <p className="deck-filters-text">
+          Confira abaixo todas as suas cartas criadas.
+          Utilize os filtros à direita para encontrá-las mais rapidamente!
+        </p>
+      </div>
+      <div className="deck-filters-inputs">
+        <h3 className="deck-filters-input-title">Filtre por nome:</h3>
+        <input
+          className="deck-filters-name"
+          type="text"
+          name="nameFilter"
+          onChange={ handleChanger }
+          data-testid="name-filter"
+        />
+        <h3 className="deck-filters-input-title">Filtre por raridade:</h3>
+        <select
+          className="deck-filters-rare"
+          name="rareFilter"
+          onChange={ handleChanger }
+          data-testid="rare-filter"
         >
-          Seu Deck
-        </h2>
-        <div className="container-fluid" data-aos="fade-up">
-          <h3 className="fs-5 mt-3">Filtrar por nome:</h3>
+          <option value="todas">Todas</option>
+          <option value="normal">Normal</option>
+          <option value="raro">Raro</option>
+          <option value="muito raro">Muito Raro</option>
+        </select>
+        <div className="deck-filters-trunfo-container">
+          <h3 className="deck-filters-input-title">Filtre por trunfo:</h3>
           <input
-            name="nameFilter"
-            type="text"
-            data-testid="name-filter"
-            onChange={ onInputChange }
-            className="form-control"
+            className="deck-filters-trunfo"
+            type="checkbox"
+            name="trunfoFilter"
+            onChange={ handleChanger }
+            data-testid="trunfo-filter"
           />
         </div>
-        <div className="container-fluid" data-aos="fade-up">
-          <h3 className="fs-5 mt-3">Filtrar por raridade:</h3>
-          <select
-            name="rareFilter"
-            data-testid="rare-filter"
-            onChange={ onInputChange }
-            className="form-select"
-          >
-            <option value="todas">Todas</option>
-            <option value="normal">Normal</option>
-            <option value="raro">Raro</option>
-            <option value="muito raro">Muito Raro</option>
-          </select>
-        </div>
-        <div
-          className="container-fluid d-flex flex-row align-items-center mt-3 mb-3"
-          data-aos="fade-up"
+        <button
+          className="filter-btn"
+          type="button"
+          onClick={ filterDeck }
+          data-testid="filter-button"
         >
-          <h5 className="fs-5 m-0 me-3">Somente Super Trunfo</h5>
-          <label
-            htmlFor="trunfoFilter"
-            className="form-check-label"
-          >
-            <input
-              type="checkbox"
-              data-testid="trunfo-filter"
-              name="trunfoFilter"
-              onChange={ onInputChange }
-              className="form-check-input"
-            />
-          </label>
-        </div>
+          Filtrar
+        </button>
       </div>
-    );
-  }
+      <img
+        className="deck-filters-pikachu"
+        src={ Pikachu }
+        alt="pikachu"
+        data-aos="fade-right"
+      />
+    </div>
+  );
 }
 
 DeckFilters.propTypes = {
-  onInputChange: PropTypes.func.isRequired,
+  value: PropTypes.shape({
+    cardData: PropTypes.shape({
+      deckCards: PropTypes.arrayOf.isRequired,
+    }).isRequired,
+    setCardData: PropTypes.func.isRequired,
+  }).isRequired,
 };
