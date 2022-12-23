@@ -1,10 +1,10 @@
 # Projeto Tryunfo
 
 ## Contexto
-Esse projeto foi desenvolvido no módulo frontend da minha formação em desenvolvimento web fullstack. No módulo em específico deste projeto, tive o desafio de administrar estados de um componente com a biblioteca `ReactJS`. O conteúdo no entanto, tratava de manipulações de estado em **Componentes de Classe**. Após entregar o projeto porém, decidi refatorá-lo por completo. Transformando a aplicação, até então utilizando **Programada Orientada à Objetos(POO)**, em uma aplicação arquiteturada no paradigma de **Programação Funcional**, consumindo os tão famosos *React Hooks*, tecnologias da própria biblioteca ReactJS.
+Esse projeto foi desenvolvido no módulo frontend da minha formação em desenvolvimento web fullstack. No módulo em específico deste projeto, tive o desafio de administrar estados de um componente com a biblioteca `ReactJS`. O conteúdo no entanto, tratava-se de manipulações de estado em **Componentes de Classe**. Após entregar o projeto porém, decidi refatorá-lo por completo. Transformando a aplicação, até então utilizando **Programada Orientada à Objetos(POO)**, em uma aplicação arquiteturada no paradigma de **Programação Funcional**, consumindo os tão famosos *React Hooks*, tecnologias da biblioteca ReactJS.
 
 ## Conceito
-A aplicação é composta por um **Componente Controlado** que funciona como um formulário, guardando os dados que o usuário fornece, através dos campos preenchidos; no estado da aplicação e os transformando em cartas ao estilo Super-trunfo. Sendo assim possível criar um baralho, que fica salvo no *localStorage*, do navegador. Por fim também é possível filtrar as cartas, já salvas no baralho, por: nome, raridade ou trunfo.
+A aplicação é composta por um **Componente Controlado** que funciona como um formulário, guardando os dados que o usuário fornece, através dos campos preenchidos, no estado da aplicação. Esses dados são então modelados em um componente que simula uma carta de Super-trunfo. Sendo assim possível, criar um baralho que fica salvo no *localStorage* do navegador. Por fim também é possível filtrar as cartas, já salvas no baralho, por: nome, raridade ou trunfo.
 
 ## Tecnologias utilizadas 
 - [Javascript](https://www.javascript.com/)
@@ -18,13 +18,12 @@ A aplicação é composta por um **Componente Controlado** que funciona como um 
 
 ## Instruções para Execução:
 
-### Execute a aplicação em ambiente de produção [aqui](https://rafaelimaf.github.io/tryunfo/)!
-Ou caso queira executar o projeto localmente, em ambiente de desenvolvimento, siga os passos abaixo:
-
 ### ⚠️ Requisitos Mínimos
 Para que o projeto possa ser executado localmente, é necessário que você possua instalado em seu sistema, o [Docker](https://www.docker.com/).
 
 O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containers e imagens, quais serão utilizados nesse projeto para subir a aplicação em ambiente `Node` na versão `14-alpine`.
+
+### 📝 Etapas
 
 <details>
   <summary>
@@ -70,6 +69,6 @@ O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containe
 </details>
 
 ## Propriedade intelectual e referências:
-Toda a aplicação foi desenvolvida por mim de forma independente, sendo necessário isto, para a aprovação do projeto. Toda a criação e implementação de Componentes, Estilos e Lógica para o cumprimento dos requisitos do projeto, por mim foram feitas.
+Toda a aplicação foi desenvolvida por mim de forma independente, sendo necessário isto, para minha aprovação no projeto. Toda a criação e implementação de Componentes, Estilos e Lógica para o cumprimento dos requisitos do projeto, por mim foram feitas.
 
-**No entanto, todos os arquivos de testes foram inicialmente desenvolvidos pela [Trybe](https://www.betrybe.com/), até o momento da avaliação final, onde por motivos obvios, eu não os poderia manipular. Após a minha aprovação e o inicio da refatoração do projeto, grande parte dos testes foram reimplementados por mim, para que pudessem entrar no contexto de uma aplicação Funcional, visto que foram desenvolvidos para uma aplicação Orientada à Objetos.**
+**No entanto, todos os arquivos de testes foram inicialmente desenvolvidos pela [Trybe](https://www.betrybe.com/), até o momento da avaliação final, onde por motivos óbvios, eu não poderia manipulá-los. Após a minha aprovação e o inicio da refatoração do projeto, grande parte dos testes foram reimplementados por mim, para que pudessem entrar no contexto de uma aplicação Funcional, visto que foram desenvolvidos inicialmente para uma aplicação Orientada à Objetos.**
