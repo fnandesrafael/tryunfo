@@ -23,7 +23,7 @@ Para que o projeto possa ser executado localmente, é necessário que você poss
 
 O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containers e imagens, quais serão utilizados nesse projeto para subir a aplicação em ambiente `Node` na versão `14-alpine`.
 
-### 📝 Etapas
+### 📝 Configurações
 
 <details>
   <summary>
@@ -54,7 +54,10 @@ O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containe
   </summary>
 
   ####
-  Todos os `Testes`, assim como as configurações de `ESlint` e `Stylelint` fazem parte do fluxo de CI do projeto. Caso queira realizar os testes da aplicação, basta que você se anexe ao terminal do container com o comando:
+  Todos os `Testes`, assim como as configurações de `ESlint` e `Stylelint` fazem parte do fluxo de CI do projeto.
+  
+  ##### Testes Unitários
+  Caso queira realizar os testes da aplicação, basta que você se anexe ao terminal do container com o comando:
 
   ```cli
   docker exec -it react-app-dockerized sh
@@ -66,6 +69,12 @@ O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containe
   npm run test:dev
   ```
   >Esse comando rodará todos os testes do projeto. Caso prefira, rode o comando `npm run test:dev *01*`, ou o número de qualquer outro teste, para rodá-lo em específico.
+  
+  ##### Linter
+  O Linter utilizado no código do programa foi o `Eslint`. Caso queira rodá-lo, basta que, seguindo os passos iniciais dos comandos anteriores, você digite o comando abaixo no terminal do container:
+  ```cli
+  npm run lint
+  ```
 </details>
 
 ## Propriedade intelectual e referências:
