@@ -6,7 +6,7 @@
   flex-flow: row;
   height: 500px;
   margin-bottom: 100px;
-  width: 1831px;
+  width: 100%;
 }
 
 .deck-filters-description {
@@ -147,7 +147,7 @@
 
   .deck-filters-body {
     height: 400px;
-    width: 1366px;
+    width: 100%;
   }
 
   .deck-filters-description {

@@ -2,7 +2,6 @@ body {
   background-color: white;
   margin: 0;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 html {
@@ -30,11 +29,4 @@ html {
   flex-direction: row;
   justify-content: space-around;
   margin: 200px 0;
-}
-
-@media screen and ( max-width : 1366px ) and ( max-height : 768px ) {
-
-  .card-creation-section {
-    margin-top: 250px;
-  }
 }

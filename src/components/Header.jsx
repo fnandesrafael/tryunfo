@@ -24,7 +24,7 @@ export default function Header() {
         <img
           src={ Pokeball }
           alt="Pokébola"
-          className="header-pokeball-3"
+          className="header-pokeball-bg"
         />
         <a href="/">
           <h1 className="header-title" data-aos="fade-right">Pokétrunfo</h1>
