@@ -17,7 +17,7 @@ html {
 .card-creation-section {
   display: flex;
   flex-direction: row;
-  height: 250vh;
+  height: 200vh;
   justify-content: start;
   margin-top: 30vh;
   width: 100%;
