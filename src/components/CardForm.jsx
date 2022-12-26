@@ -104,7 +104,7 @@ export default function CardForm({ value }) {
           onChange={ handleChanger }
           data-testid="name-input"
         />
-        <p className="card-form-input-text">
+        <p className="card-form-input-p">
           Digite aqui o nome do seu Pokémon
         </p>
         <h2 className="card-form-input-title">
@@ -118,7 +118,7 @@ export default function CardForm({ value }) {
           onChange={ handleChanger }
           data-testid="image-input"
         />
-        <p className="card-form-input-text">
+        <p className="card-form-input-p">
           Insira abaixo a url de alguma imagem do seu Pokémon
         </p>
         <h2 className="card-form-input-title">Descrição:</h2>
@@ -129,7 +129,7 @@ export default function CardForm({ value }) {
           onChange={ handleChanger }
           data-testid="description-input"
         />
-        <p className="card-form-input-text">
+        <p className="card-form-input-p">
           Descreva um pouco mais o seu Pokémon e guarde informações valiosas
         </p>
         <h2 className="card-form-input-title">
@@ -176,7 +176,7 @@ export default function CardForm({ value }) {
             />
           </div>
         </div>
-        <p className="card-form-input-text">
+        <p className="card-form-input-p">
           Agora você pode definir cada um dos três atributos do seu Pokémon
         </p>
         {
@@ -200,7 +200,7 @@ export default function CardForm({ value }) {
             </div>
           )
         }
-        <p className="card-form-input-text">
+        <p className="card-form-input-p">
           Decida se essa carta é o seu Super Trunfo, lembre-se de que só
           pode haver um Super Trunfo no seu baralho!
         </p>
@@ -220,7 +220,7 @@ export default function CardForm({ value }) {
             <option value="muito raro">Muito Raro</option>
           </select>
         </div>
-        <p className="card-form-input-text">
+        <p className="card-form-input-p">
           Defina o quão rara é essa nova carta
         </p>
       </form>
