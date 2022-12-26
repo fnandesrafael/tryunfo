@@ -1,10 +1,7 @@
 # Projeto Tryunfo
 
-## Contexto
-Esse projeto foi desenvolvido no módulo frontend da minha formação em desenvolvimento web fullstack. No módulo em específico deste projeto, tive o desafio de administrar estados de um componente com a biblioteca `ReactJS`. O conteúdo no entanto, tratava-se de manipulações de estado em **Componentes de Classe**. Após entregar o projeto porém, decidi refatorá-lo por completo. Transformando a aplicação, até então utilizando **Programada Orientada à Objetos(POO)**, em uma aplicação arquiteturada no paradigma de **Programação Funcional**, consumindo os tão famosos *React Hooks*, tecnologias da biblioteca ReactJS.
-
 ## Conceito
-A aplicação é composta por um **Componente Controlado** que funciona como um formulário, guardando os dados que o usuário fornece, através dos campos preenchidos, no estado da aplicação. Esses dados são então modelados em um componente que simula uma carta de Super-trunfo. Sendo assim possível, criar um baralho que fica salvo no *localStorage* do navegador. Por fim também é possível filtrar as cartas, já salvas no baralho, por: nome, raridade ou trunfo.
+Essa é uma aplicação *frontend*, desenvolvida com a biblioteca `ReactJS`, composta por um **Componente Controlado** que funciona como um formulário, através de **React Hooks** as informações são salvas, no estado da aplicação. Esses dados são então modelados em um componente que simula uma carta de Super-trunfo. Sendo assim possível, criar um baralho que fica salvo no *localStorage* do navegador. Por fim também é possível filtrar as cartas, já salvas no baralho, por: nome, raridade ou trunfo. Inicialmente a aplicação foi desenvolvida utilizando **Componentes de Classe**. Após entregar o projeto porém, decidi refatorá-lo por completo. Transformando a aplicação, até então utilizando **Programada Orientada à Objetos(POO)**, em uma aplicação arquiteturada no paradigma de **Programação Funcional**.
 
 ## Tecnologias utilizadas 
 - [Javascript](https://www.javascript.com/)
