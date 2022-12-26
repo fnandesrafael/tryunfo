@@ -28,4 +28,5 @@ html {
   flex-flow: wrap;
   flex-direction: row;
   justify-content: space-around;
+  width: 100%;
 }
