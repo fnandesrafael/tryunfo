@@ -54,7 +54,7 @@
 .deck-filters-name {
   background: white;
   border: none;
-  border-radius: 0.75rem;
+  border-radius: 0.5vw;
   box-shadow: 0 21px 19px #bdbdbd40;
   font-family: 'Nunito';
   font-size: 1.25vw;
@@ -68,13 +68,13 @@
 .deck-filters-rare {
   background: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 0.5vw;
   box-shadow: 0 10px 15px #d6d6d6;
   color: black;
   font-family: 'Nunito';
-  font-size: 1.25vw;
+  font-size: 1vw;
   font-weight: 400;
-  height: 45px;
+  height: 5vh;
   outline: none;
   padding: 0.5rem;
   transition: 0.5s;

@@ -14,7 +14,6 @@
   font-style: normal;
   font-weight: 800;
   margin-bottom: 10vh;
-  padding: 75px 0 0;
   text-align: center;
 }
 
@@ -24,7 +23,7 @@
   display: flex;
   flex-flow: column;
   height: 175vh;
-  padding: 3rem;
+  padding: 2vw;
   width: 35vw;
 }
 
@@ -32,7 +31,7 @@
   align-items: center;
   color: black;
   font-family: 'Nunito';
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   font-style: normal;
   font-weight: 700;
 }
@@ -40,14 +39,14 @@
 .card-form-input {
   background: white;
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.5vw;
   box-shadow: 0 10px 15px #d6d6d6;
   font-family: 'Nunito';
-  font-size: 1rem;
+  font-size: 1vw;
   font-weight: 400;
-  height: 5vh;
+  height: 3vh;
   outline: none;
-  padding: 1rem;
+  padding: 1vw;
   transition: 0.5s;
   width: 33vw;
 }
@@ -67,14 +66,14 @@
 .card-form-description-input {
   background: white;
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.5vw;
   box-shadow: 0 10px 15px #d6d6d6;
   font-family: 'Nunito';
-  font-size: 1rem;
+  font-size: 1vw;
   font-weight: 400;
   height: 15vh;
   outline: none;
-  padding: 1rem;
+  padding: 1vw;
   transition: 0.5s;
   width: 33vw;
 }
@@ -97,7 +96,7 @@
   align-items: center;
   color: black;
   font-family: 'Nunito';
-  font-size: 20px;
+  font-size: 1.25vw;
   font-style: normal;
   font-weight: 700;
   text-align: center;
@@ -106,16 +105,16 @@
 .attr-input {
   background: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 0.5vw;
   box-shadow: 0 10px 15px #d6d6d6;
   font-family: 'Nunito';
-  font-size: 20px;
+  font-size: 1vw;
   font-weight: 400;
-  height: 25px;
+  height: 3vh;
   outline: none;
-  padding: 1rem;
+  padding: 1vw;
   transition: 0.5s;
-  width: 115px;
+  width: 7vw;
 }
 
 .attr-input:focus {
@@ -130,27 +129,27 @@
 
 .super-trunfo-checkbox {
   box-shadow: 0 21px 19px #bdbdbd40;
-  height: 20px;
-  margin-left: 25px;
+  height: 2vh;
+  margin-left: 2vw;
   outline: none;
-  width: 20px;
+  width: 2vw;
 }
 
 .rarity-select {
   background: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 0.5vw;
   box-shadow: 0 10px 15px #d6d6d6;
   color: black;
   font-family: 'Nunito';
-  font-size: 1.25vw;
+  font-size: 1vw;
   font-weight: 400;
-  height: 45px;
+  height: 5vh;
   margin-left: 25px;
   outline: none;
-  padding: 0.5rem;
+  padding: 0.5vw;
   transition: 0.5s;
-  width: 200px;
+  width: 10vw;
 }
 
 .rarity-select:focus {
