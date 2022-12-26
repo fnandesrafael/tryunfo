@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Aos from 'aos';
 import '../styles/DeckFilters.css';
 import PropTypes from 'prop-types';
-import Pokeball from '../assets/images/pokeball.png';
 import Pikachu from '../assets/images/pikachu.png';
 import 'aos/dist/aos.css';
 
@@ -43,8 +42,6 @@ export default function DeckFilters({ value }) {
 
   return (
     <div className="deck-filters-body">
-      <img className="deck-filters-pokeball-1" src={ Pokeball } alt="pokeball" />
-      <img className="deck-filters-pokeball-2" src={ Pokeball } alt="pokeball" />
       <div className="deck-filters-description">
         <h1 className="deck-filters-title" data-aos="fade-up">Seu Baralho</h1>
         <p className="deck-filters-text">

@@ -43,6 +43,11 @@ O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containe
   > O comando acima irá construir o container "react-app-dockerized", através da imagem de mesmo nome. Com as flags "-v" o container estará mapeando o volume passado, o que significa que qualquer alteração nos arquivos também serão captadas no container. Com a flag "-p" é feito o bind da porta do container(3000) com a sua porta local 3000. E por fim, com a flag "-d" o container será executado desanexado do terminal.
 
   Agora basta ir até o seu endereço `localhost:3000/` e a aplicação estará rodando em ambiente de desenvolvimento!
+
+  E se ainda quiser conectar-se ao container para rodar algum comando, utilize o comando abaixo:
+  ```cli
+  docker exec -it react-app-dockerized sh
+  ```
 </details>
 
 <details>
