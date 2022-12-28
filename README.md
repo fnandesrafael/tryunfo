@@ -1,7 +1,15 @@
 # Projeto Tryunfo
 
+<img src="/src/assets/images/screenshot01.png">
+<img src="/src/assets/images/screenshot02.png">
+<img src="/src/assets/images/screenshot03.png">
+<img src="/src/assets/images/screenshot04.png">
+<img src="/src/assets/images/screenshot05.png">
+
 ## Conceito
 Essa é uma aplicação *frontend*, desenvolvida com a biblioteca `ReactJS`, composta por um **Componente Controlado** que funciona como um formulário, através de **React Hooks** as informações são salvas, no estado da aplicação. Esses dados são então modelados em um componente que simula uma carta de Super-trunfo. Sendo assim possível, criar um baralho que fica salvo no *localStorage* do navegador. Por fim também é possível filtrar as cartas, já salvas no baralho, por: nome, raridade ou trunfo. Inicialmente a aplicação foi desenvolvida utilizando **Componentes de Classe**. Após entregar o projeto porém, decidi refatorá-lo por completo. Transformando a aplicação, até então utilizando **Programada Orientada à Objetos(POO)**, em uma aplicação arquiteturada no paradigma de **Programação Funcional**.
+
+### Acesse a aplicação em ambiente de produção clicando [aqui](https://rafaelimaf.github.io/tryunfo/)
 
 ## Tecnologias utilizadas 
 - [Javascript](https://www.javascript.com/)
@@ -83,3 +91,5 @@ O `Docker` é uma ferramenta de gerenciamento de ambientes, através de containe
 Toda a aplicação foi desenvolvida por mim de forma independente, sendo necessário isto, para minha aprovação no projeto. Toda a criação e implementação de Componentes, Estilos e Lógica para o cumprimento dos requisitos do projeto, por mim foram feitas.
 
 **No entanto, todos os arquivos de testes foram inicialmente desenvolvidos pela [Trybe](https://www.betrybe.com/), até o momento da avaliação final, onde por motivos óbvios, eu não poderia manipulá-los. Após a minha aprovação e o inicio da refatoração do projeto, grande parte dos testes foram reimplementados por mim, para que pudessem entrar no contexto de uma aplicação Funcional, visto que foram desenvolvidos inicialmente para uma aplicação Orientada à Objetos.**
+
+Todas as imagens utilizadas neste projeto são de autoria e direito da *© Nintendo*; foram exclusivamente utilizadas para estudo e prática, sem nenhum fim comercial.
