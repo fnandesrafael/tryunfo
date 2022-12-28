@@ -7,7 +7,7 @@
 <img src="/src/assets/images/screenshot05.png">
 
 ## Conceito
-Essa é uma aplicação *frontend*, desenvolvida com a biblioteca `ReactJS`, composta por um **Componente Controlado** que funciona como um formulário, através de **React Hooks** as informações são salvas, no estado da aplicação. Esses dados são então modelados em um componente que simula uma carta de Super-trunfo. Sendo assim possível, criar um baralho que fica salvo no *localStorage* do navegador. Por fim também é possível filtrar as cartas, já salvas no baralho, por: nome, raridade ou trunfo. Inicialmente a aplicação foi desenvolvida utilizando **Componentes de Classe**. Após entregar o projeto porém, decidi refatorá-lo por completo. Transformando a aplicação, até então utilizando **Programada Orientada à Objetos(POO)**, em uma aplicação arquiteturada no paradigma de **Programação Funcional**.
+Essa é uma aplicação *frontend*, desenvolvida com a biblioteca `ReactJS`, composta por um **Componente Controlado** que funciona como um formulário. Através de **React Hooks** as informações são salvas, no estado da aplicação, esses dados são então modelados em um componente que simula uma carta de Super-trunfo; sendo assim possível, criar um baralho que fica salvo no *localStorage* do navegador. Por fim também é possível filtrar as cartas, já salvas no baralho, por: nome, raridade ou trunfo. Inicialmente a aplicação foi desenvolvida utilizando **Componentes de Classe**, mas após entregar o projeto, decidi refatorá-lo por completo; transformando a aplicação, até então utilizando **Programada Orientada à Objetos(POO)**, em uma aplicação arquiteturada no paradigma de **Programação Funcional**.
 
 ### Acesse a aplicação em ambiente de produção clicando [aqui](https://rafaelimaf.github.io/tryunfo/)
 
